@@ -1,0 +1,14 @@
+BerryClient/.vs/
+BerryClient/Library/
+BerryClient/Logs/
+BerryClient/obj/
+BerryClient/Temp/
+BerryClient/Assembly-CSharp.csproj
+BerryClient/BerryClient.sln
+BerryCPP/berry/.vs/
+BerryCPP/berry/berry/Debug/
+BerryCPP/berry/berry/x64/
+BerryCPP/berry/Debug/
+BerryCPP/berry/berry_lua/Debug/
+BerryCPP/berry/berry_lua/x64/
+BerryCPP/berry/x64/

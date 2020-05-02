@@ -19,10 +19,74 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="lua-5.3.5\lapi.c" />
+    <ClCompile Include="lua-5.3.5\lauxlib.c" />
+    <ClCompile Include="lua-5.3.5\lbaselib.c" />
+    <ClCompile Include="lua-5.3.5\lbitlib.c" />
+    <ClCompile Include="lua-5.3.5\lcode.c" />
+    <ClCompile Include="lua-5.3.5\lcorolib.c" />
+    <ClCompile Include="lua-5.3.5\lctype.c" />
+    <ClCompile Include="lua-5.3.5\ldblib.c" />
+    <ClCompile Include="lua-5.3.5\ldebug.c" />
+    <ClCompile Include="lua-5.3.5\ldo.c" />
+    <ClCompile Include="lua-5.3.5\ldump.c" />
+    <ClCompile Include="lua-5.3.5\lfunc.c" />
+    <ClCompile Include="lua-5.3.5\lgc.c" />
+    <ClCompile Include="lua-5.3.5\linit.c" />
+    <ClCompile Include="lua-5.3.5\liolib.c" />
+    <ClCompile Include="lua-5.3.5\llex.c" />
+    <ClCompile Include="lua-5.3.5\lmathlib.c" />
+    <ClCompile Include="lua-5.3.5\lmem.c" />
+    <ClCompile Include="lua-5.3.5\loadlib.c" />
+    <ClCompile Include="lua-5.3.5\lobject.c" />
+    <ClCompile Include="lua-5.3.5\lopcodes.c" />
+    <ClCompile Include="lua-5.3.5\loslib.c" />
+    <ClCompile Include="lua-5.3.5\lparser.c" />
+    <ClCompile Include="lua-5.3.5\lstate.c" />
+    <ClCompile Include="lua-5.3.5\lstring.c" />
+    <ClCompile Include="lua-5.3.5\lstrlib.c" />
+    <ClCompile Include="lua-5.3.5\ltable.c" />
+    <ClCompile Include="lua-5.3.5\ltablib.c" />
+    <ClCompile Include="lua-5.3.5\ltm.c" />
+    <ClCompile Include="lua-5.3.5\lundump.c" />
+    <ClCompile Include="lua-5.3.5\lutf8lib.c" />
+    <ClCompile Include="lua-5.3.5\lvm.c" />
+    <ClCompile Include="lua-5.3.5\lzio.c" />
+    <ClCompile Include="source\BerryLuaWrapper.cpp" />
     <ClCompile Include="source\berry_lua_entry.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\berry_lua_entry.h" />
+    <ClInclude Include="lua-5.3.5\lapi.h" />
+    <ClInclude Include="lua-5.3.5\lauxlib.h" />
+    <ClInclude Include="lua-5.3.5\lcode.h" />
+    <ClInclude Include="lua-5.3.5\lctype.h" />
+    <ClInclude Include="lua-5.3.5\ldebug.h" />
+    <ClInclude Include="lua-5.3.5\ldo.h" />
+    <ClInclude Include="lua-5.3.5\lfunc.h" />
+    <ClInclude Include="lua-5.3.5\lgc.h" />
+    <ClInclude Include="lua-5.3.5\llex.h" />
+    <ClInclude Include="lua-5.3.5\llimits.h" />
+    <ClInclude Include="lua-5.3.5\lmem.h" />
+    <ClInclude Include="lua-5.3.5\lobject.h" />
+    <ClInclude Include="lua-5.3.5\lopcodes.h" />
+    <ClInclude Include="lua-5.3.5\lparser.h" />
+    <ClInclude Include="lua-5.3.5\lprefix.h" />
+    <ClInclude Include="lua-5.3.5\lstate.h" />
+    <ClInclude Include="lua-5.3.5\lstring.h" />
+    <ClInclude Include="lua-5.3.5\ltable.h" />
+    <ClInclude Include="lua-5.3.5\ltm.h" />
+    <ClInclude Include="lua-5.3.5\lua.h" />
+    <ClInclude Include="lua-5.3.5\lua.hpp" />
+    <ClInclude Include="lua-5.3.5\luaconf.h" />
+    <ClInclude Include="lua-5.3.5\lualib.h" />
+    <ClInclude Include="lua-5.3.5\lundump.h" />
+    <ClInclude Include="lua-5.3.5\lvm.h" />
+    <ClInclude Include="lua-5.3.5\lzio.h" />
+    <ClInclude Include="source\BerryLuaWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lua-5.3.5\Makefile" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

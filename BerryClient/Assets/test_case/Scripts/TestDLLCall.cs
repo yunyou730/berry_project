@@ -9,6 +9,7 @@ public class TestDLLCall : MonoBehaviour
     void Start()
     {
         num = BerryLua.berry_test_1(1, 3);
+        BerryLua.ExcuteLuaFile("main.lua");
     }
 
     // Update is called once per frame

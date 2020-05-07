@@ -23,6 +23,8 @@ namespace berry
 		void Log(const char* log);
 
 
+		void ExecuteFile(const char* luaFilePath);
+
 	private:
 		BerryLuaWraper();
 

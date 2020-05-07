@@ -13,4 +13,4 @@ extern "C" BERRY_LUA_API void berry_test_lua_1(const char* luaCode);
 typedef void(__stdcall* LogFuncProto)(const char* info);
 extern "C" BERRY_LUA_API void berry_register_log_func(LogFuncProto func);
 extern "C" BERRY_LUA_API void berry_test_call_c_sharp_back(const char* strParam);
-
+extern "C" BERRY_LUA_API void berry_test_do_lua_file(const char* strParam);

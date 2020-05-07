@@ -1,4 +1,5 @@
 #include "BerryLuaWrapper.h"
+#include "BerryClass.h"
 
 using namespace berry;
 
@@ -12,6 +13,7 @@ BerryLuaWraper::BerryLuaWraper()
 {
 	m_L = luaL_newstate();
 	luaL_openlibs(m_L);
+	OpenBerryLib(m_L);
 }
 
 BerryLuaWraper::~BerryLuaWraper()
@@ -22,6 +24,11 @@ BerryLuaWraper::~BerryLuaWraper()
 void BerryLuaWraper::ExecuteString(const char* luaCode)
 {
 	luaL_dostring(m_L, luaCode);
+}
+
+void BerryLuaWraper::ExecuteFile(const char* luaFilePath)
+{
+	luaL_dofile(m_L, luaFilePath);
 }
 
 void BerryLuaWraper::RegisterLogFunc(LogFuncProto func)

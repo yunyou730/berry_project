@@ -119,6 +119,9 @@
     <ClCompile Include="source\BerryLuaWrapper.cpp">
       <Filter>source</Filter>
     </ClCompile>
+    <ClCompile Include="source\BerryClass.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\berry_lua_entry.h">
@@ -203,6 +206,9 @@
       <Filter>lua-5.3.5</Filter>
     </ClInclude>
     <ClInclude Include="source\BerryLuaWrapper.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\BerryClass.h">
       <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>

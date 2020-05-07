@@ -52,6 +52,7 @@
     <ClCompile Include="lua-5.3.5\lutf8lib.c" />
     <ClCompile Include="lua-5.3.5\lvm.c" />
     <ClCompile Include="lua-5.3.5\lzio.c" />
+    <ClCompile Include="source\BerryClass.cpp" />
     <ClCompile Include="source\BerryLuaWrapper.cpp" />
     <ClCompile Include="source\berry_lua_entry.cpp" />
   </ItemGroup>
@@ -83,6 +84,7 @@
     <ClInclude Include="lua-5.3.5\lundump.h" />
     <ClInclude Include="lua-5.3.5\lvm.h" />
     <ClInclude Include="lua-5.3.5\lzio.h" />
+    <ClInclude Include="source\BerryClass.h" />
     <ClInclude Include="source\BerryLuaWrapper.h" />
   </ItemGroup>
   <ItemGroup>

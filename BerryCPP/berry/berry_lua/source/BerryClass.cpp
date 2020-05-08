@@ -15,7 +15,7 @@ static int create_berry_object(lua_State* L)
 	double num = lua_tonumber(L, 1);
 	const char* str = lua_tostring(L, 2);
 	BerryObject* berryObject = new BerryObject((int)num,str);
-	lua_newuserdata(L, sizeof(berryObject));
+	lua_pushlightuserdata(L, berryObject);
 	return 1;
 }
 
@@ -23,7 +23,7 @@ static int delete_berry_object(lua_State* L)
 {
 	// ’‚¿Ô”–¥ÌŒÛ!
 	// @todo
-	BerryObject* berryObject = static_cast<BerryObject*>(lua_touserdata(L, 1));
+	BerryObject* berryObject = (BerryObject*)(lua_touserdata(L, 1));
 	delete berryObject;
 	return 0;
 }

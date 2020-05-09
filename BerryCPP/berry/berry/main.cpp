@@ -10,9 +10,9 @@ int main()
         printf(info);
     });
     berry_test_call_c_sharp_back("$$$$");
-
-
     berry_test_do_lua_file("test.lua");
+
+    berry_test_lua_file();
 
     return 0;
 }

@@ -25,6 +25,8 @@ namespace berry
 
 		void ExecuteFile(const char* luaFilePath);
 
+		void TestCallLua();
+
 	private:
 		BerryLuaWraper();
 

@@ -34,3 +34,8 @@ extern "C" BERRY_LUA_API void berry_test_do_lua_file(const char* strParam)
 	berry::BerryLuaWraper::GetInstance()->ExecuteFile(strParam);
 }
 
+extern "C" BERRY_LUA_API void berry_test_lua_file()
+{
+	berry::BerryLuaWraper::GetInstance()->TestCallLua();
+}
+

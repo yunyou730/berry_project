@@ -16,13 +16,22 @@ static int create_berry_object(lua_State* L)
 	const char* str = lua_tostring(L, 2);
 	BerryObject* berryObject = new BerryObject((int)num,str);
 	lua_pushlightuserdata(L, berryObject);
+
+
+	//luaL_newlibtable(L, "");
+	
+	//lua_newuserdata(L, sizeof(*berryObject));
+
+	//lua_createtable(L,)
+	lua_newtable(L);
+	lua_setfield(L,-1,"");
+
+
 	return 1;
 }
 
 static int delete_berry_object(lua_State* L)
 {
-	// ’‚¿Ô”–¥ÌŒÛ!
-	// @todo
 	BerryObject* berryObject = (BerryObject*)(lua_touserdata(L, 1));
 	delete berryObject;
 	return 0;

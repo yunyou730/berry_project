@@ -4,8 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "berry_testcase", "berry\berry.vcxproj", "{3F594B99-9B1A-40B6-BB06-44EEFC566588}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CE92990A-A55B-4963-8F1F-616DA562B086} = {CE92990A-A55B-4963-8F1F-616DA562B086}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "berry_lua", "berry_lua\berry_lua.vcxproj", "{CE92990A-A55B-4963-8F1F-616DA562B086}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "berry_gl_client", "berry_gl_client\berry_gl_client.vcxproj", "{DB2F9764-512E-4F19-8A2A-FE1B6CC942A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +36,14 @@ Global
 		{CE92990A-A55B-4963-8F1F-616DA562B086}.Release|x64.Build.0 = Release|x64
 		{CE92990A-A55B-4963-8F1F-616DA562B086}.Release|x86.ActiveCfg = Release|Win32
 		{CE92990A-A55B-4963-8F1F-616DA562B086}.Release|x86.Build.0 = Release|Win32
+		{DB2F9764-512E-4F19-8A2A-FE1B6CC942A2}.Debug|x64.ActiveCfg = Debug|x64
+		{DB2F9764-512E-4F19-8A2A-FE1B6CC942A2}.Debug|x64.Build.0 = Debug|x64
+		{DB2F9764-512E-4F19-8A2A-FE1B6CC942A2}.Debug|x86.ActiveCfg = Debug|Win32
+		{DB2F9764-512E-4F19-8A2A-FE1B6CC942A2}.Debug|x86.Build.0 = Debug|Win32
+		{DB2F9764-512E-4F19-8A2A-FE1B6CC942A2}.Release|x64.ActiveCfg = Release|x64
+		{DB2F9764-512E-4F19-8A2A-FE1B6CC942A2}.Release|x64.Build.0 = Release|x64
+		{DB2F9764-512E-4F19-8A2A-FE1B6CC942A2}.Release|x86.ActiveCfg = Release|Win32
+		{DB2F9764-512E-4F19-8A2A-FE1B6CC942A2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

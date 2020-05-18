@@ -1,6 +1,8 @@
 #include "BerryLuaWrapper.h"
 #include "BerryClass.h"
 #include <string>
+#include <sstream>
+#include <stdio.h>
 
 using namespace berry;
 
@@ -71,4 +73,47 @@ void BerryLuaWraper::Log(const char* log)
 	{
 		m_logFunc(log);
 	}
+}
+
+std::string BerryLuaWraper::DumpStack(lua_State* L)
+{
+	int stackSize = lua_gettop(L);
+	std::string allInfo;
+	for (int index = 1; index <= stackSize; index++)
+	{
+		int t = lua_type(L, index);
+		std::string strInfo;
+
+		switch (t)
+		{
+			case LUA_TSTRING:
+			{
+				strInfo = lua_tostring(L, index);
+				break;
+			}
+			case LUA_TBOOLEAN:
+			{
+				strInfo = lua_toboolean(L, index) ? "true" : "false";
+				break;
+			}
+			case LUA_TNUMBER:
+			{
+				lua_Number result = lua_tonumber(L, index);
+				std::stringstream ss;
+				ss << result;
+				ss >> strInfo;
+				break;
+			}
+			default:
+			{
+				strInfo = lua_typename(L, index);
+				break;
+			}
+		};
+		allInfo = allInfo + strInfo.c_str() + "\n";
+		printf("%s\t", strInfo.c_str());
+	}
+	printf("\n");
+	return allInfo;
+	
 }

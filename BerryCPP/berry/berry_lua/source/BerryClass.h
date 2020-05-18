@@ -12,6 +12,8 @@ extern void OpenBerryLib(lua_State* L);
 
 static int create_berry_object(lua_State* L);
 static int delete_berry_object(lua_State* L);
+static int test_lua_call_cpp(lua_State* L);
+static int create_berry_object2(lua_State* L);
 
 class BerryObject
 {
@@ -25,4 +27,5 @@ public:
 private:
 	int		m_nNum;
 	const char* m_strTest;
+	//int		m_testplace[200];
 };

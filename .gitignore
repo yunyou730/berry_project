@@ -12,3 +12,5 @@ BerryCPP/berry/Debug/
 BerryCPP/berry/berry_lua/Debug/
 BerryCPP/berry/berry_lua/x64/
 BerryCPP/berry/x64/
+BerryCPP/berry/berry_gl_client/x64/
+BerryCPP/berry/berry_gl_client/berry_gl_client.vcxproj.user

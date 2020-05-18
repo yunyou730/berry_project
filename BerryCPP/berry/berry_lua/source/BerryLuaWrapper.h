@@ -9,6 +9,7 @@ extern "C"
 }
 
 #include "../include/berry_lua_entry.h"
+#include <string>
 
 namespace berry
 {
@@ -26,6 +27,8 @@ namespace berry
 		void ExecuteFile(const char* luaFilePath);
 
 		void TestCallLua();
+
+		static std::string DumpStack(lua_State* L);
 
 	private:
 		BerryLuaWraper();

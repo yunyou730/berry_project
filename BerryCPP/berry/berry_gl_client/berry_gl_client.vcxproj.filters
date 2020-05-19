@@ -9,5 +9,19 @@
     <ClCompile Include="main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="source\Actor.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Triangle.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Actor.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Triangle.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -53,3 +53,39 @@ opengl32.lib
 否则 会报 opengl 相关的函数 有 链接 错误  
 
 
+-------------
+
+OpenGL API 参考 手册 
+
+[docs.gl](docs.gl)
+
+-------------  
+
+opengl buffer  
+
+生成 GL_ARRAY_BUFFER
+
+	float position[6] = {
+		-0.5, -0.5,
+		 0.0,  0.5,
+		 0.5, -0.5,
+	};
+
+	GLuint	buffer;
+	glGenBuffers(1,&buffer);
+	glBindBuffer(GL_ARRAY_BUFFER, buffer);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6, position, GL_STATIC_DRAW);
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+最后的 glBindBuffer(GL_ARRAY_BUFFER,0); 里面的0 是解除绑定  
+
+真正绘制时, 使用 下面的语句 
+
+		glBindBuffer(GL_ARRAY_BUFFER, buffer);
+		glDrawArrays(GL_TRIANGLES, 0,3);
+
+先告用 glBindBuffer() 告诉  OpenGL bind 哪个 buffer, 然后用 glDrawArrays() 绘制出来   
+
+由于目前还没有涉及shader , 所以暂时  画不出来  
+
+    

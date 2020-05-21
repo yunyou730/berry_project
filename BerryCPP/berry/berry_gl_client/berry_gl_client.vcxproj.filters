@@ -4,6 +4,9 @@
     <Filter Include="src">
       <UniqueIdentifier>{71a9a433-8617-42e7-a4f4-d15b89e0c395}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Shader">
+      <UniqueIdentifier>{eaf3d067-d6e7-40de-acbc-31336647942c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -15,6 +18,9 @@
     <ClCompile Include="source\Triangle.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="source\ShaderManager.cpp">
+      <Filter>src\Shader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Actor.h">
@@ -22,6 +28,9 @@
     </ClInclude>
     <ClInclude Include="source\Triangle.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ShaderManager.h">
+      <Filter>src\Shader</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

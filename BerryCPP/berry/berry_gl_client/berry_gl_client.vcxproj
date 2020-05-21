@@ -143,10 +143,12 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="source\Actor.cpp" />
+    <ClCompile Include="source\ShaderManager.cpp" />
     <ClCompile Include="source\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Actor.h" />
+    <ClInclude Include="source\ShaderManager.h" />
     <ClInclude Include="source\Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

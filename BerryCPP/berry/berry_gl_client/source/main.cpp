@@ -3,6 +3,56 @@
 #include <cstdio>
 #include <string>
 #include <iostream>
+//#include "source/ShaderManager.h"
+#include <fstream>
+#include <sstream>
+
+
+struct ShaderSource
+{
+	std::string vertex;
+	std::string fragment;
+};
+
+static void CreateShaderWithFile(const std::string& path,ShaderSource& shaderSource)
+{
+	enum class ShaderSourceType
+	{
+		None = -1,
+		Vertex = 0,
+		Fragment = 1,
+		Max,
+	};
+	std::string source[(int)ShaderSourceType::Max];
+
+	std::fstream fs;
+	fs.open(path);
+
+	ShaderSourceType sourceType = ShaderSourceType::None;
+	std::string str;
+	while (getline(fs,str))
+	{
+		std::cout << str << std::endl;
+		if (str.find("#shader") != std::string::npos)
+		{
+			if (str.find("vertex") != std::string::npos)
+			{
+				sourceType = ShaderSourceType::Vertex;
+			}
+			else if (str.find("fragment") != std::string::npos)
+			{
+				sourceType = ShaderSourceType::Fragment;
+			}
+		}
+		else if(sourceType > ShaderSourceType::None && sourceType <= ShaderSourceType::Max)
+		{
+			source[(int)sourceType] += str + "\n";
+		}
+	}
+	fs.close();
+	shaderSource.vertex = source[(int)ShaderSourceType::Vertex];
+	shaderSource.fragment = source[(int)ShaderSourceType::Fragment];
+}
 
 static GLuint CompileShader(GLuint type,const std::string& source)
 {
@@ -74,7 +124,7 @@ int main(void)
 		glfwTerminate();
 		return -1;
 	}
-
+	
 	// buffer handle
 	float position[6] = {
 		-0.5, -0.5,
@@ -94,25 +144,9 @@ int main(void)
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 
-	std::string vertexShader =
-		"#version 330 core\n"
-		"\n"
-		"layout(location = 0) in vec4 position;"
-		"\n"
-		"void main()\n"
-		"{\n"
-		"	gl_Position = position;\n"
-		"}\n";
-	std::string fragmentShader =
-		"#version 330 core\n"
-		"\n"
-		"layout(location = 0) out vec4 color;"
-		"\n"
-		"void main()\n"
-		"{\n"
-		"	color = vec4(1.0,0.0,0.0,1.0);\n"
-		"}\n";
-	GLuint shader = CreateShader(vertexShader,fragmentShader);
+	ShaderSource source;
+	CreateShaderWithFile("res/test.shader",source);
+	GLuint shader = CreateShader(source.vertex,source.fragment);
 
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
@@ -120,14 +154,6 @@ int main(void)
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		//glBegin(GL_TRIANGLES);
-		//glColor3d(1, 0, 1);
-		//glVertex2f(-0.5, -0.5);
-		//glVertex2f( 0.0,  0.5);
-		//glVertex2f( 0.5, -0.5);
-		//glEnd();
-
-		
 		glBindBuffer(GL_ARRAY_BUFFER, buffer);
 		glEnableVertexAttribArray(0);
 		glUseProgram(shader);

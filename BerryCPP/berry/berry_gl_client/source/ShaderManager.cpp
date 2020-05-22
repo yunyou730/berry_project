@@ -84,24 +84,6 @@ GLuint ShaderManager::CreateProgram(GLuint vsId, GLuint fsId)
 	return programId;
 }
 
-//GLuint ShaderManager::CreateShader(const std::string& vertexShader, const std::string& fragmentShader)
-//{
-//	GLuint program = glCreateProgram();
-//	GLuint vs = CompileShader(GL_VERTEX_SHADER, vertexShader);
-//	GLuint fs = CompileShader(GL_FRAGMENT_SHADER, fragmentShader);
-//
-//	glAttachShader(program, vs);
-//	glAttachShader(program, fs);
-//	glLinkProgram(program);
-//	glValidateProgram(program);
-//
-//	glDeleteShader(vs);
-//	glDeleteShader(fs);
-//
-//	return program;
-//}
-
-
 GLuint ShaderManager::CompileShader(GLuint type, const std::string& source)
 {
 	GLuint id = glCreateShader(type);

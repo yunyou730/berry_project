@@ -7,11 +7,11 @@
     <Filter Include="src\Shader">
       <UniqueIdentifier>{eaf3d067-d6e7-40de-acbc-31336647942c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{382475b9-05fb-49a3-87fc-4feb7e0a0ad7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="source\Actor.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -20,6 +20,9 @@
     </ClCompile>
     <ClCompile Include="source\ShaderManager.cpp">
       <Filter>src\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="source\main.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -32,5 +35,10 @@
     <ClInclude Include="source\ShaderManager.h">
       <Filter>src\Shader</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\test.shader">
+      <Filter>res</Filter>
+    </None>
   </ItemGroup>
 </Project>

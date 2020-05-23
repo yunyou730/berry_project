@@ -6,7 +6,8 @@
 //#include "source/ShaderManager.h"
 #include <fstream>
 #include <sstream>
-
+#include "GLUtil.h"
+#include <cassert>
 
 struct ShaderSource
 {
@@ -124,6 +125,16 @@ int main(void)
 		glfwTerminate();
 		return -1;
 	}
+
+	// Version info
+	const GLubyte* vendor = glGetString(GL_VENDOR);
+	const GLubyte* version = glGetString(GL_VERSION);
+	std::cout << "GL info\n" << "[vendor]" << vendor << std::endl << "[version]" << version << std::endl;
+	
+	
+	//GLCALL(glGetString(GL_VENDOR));
+	//GLCALL(glGetString(GL_ERROR_REGAL));
+	
 	
 	// buffer handle
 	float position[6] = {

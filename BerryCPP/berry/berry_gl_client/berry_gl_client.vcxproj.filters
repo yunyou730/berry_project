@@ -24,6 +24,9 @@
     <ClCompile Include="source\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="source\GLUtil.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\Actor.h">
@@ -34,6 +37,9 @@
     </ClInclude>
     <ClInclude Include="source\ShaderManager.h">
       <Filter>src\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GLUtil.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

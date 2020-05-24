@@ -31,6 +31,10 @@ static void CreateShaderWithFile(const std::string& path,ShaderSource& shaderSou
 
 	std::fstream fs;
 	fs.open(path);
+    if(!fs.is_open())
+    {
+        printf("open shader file %s failed\n",path.c_str());
+    }
 
 	ShaderSourceType sourceType = ShaderSourceType::None;
 	std::string str;
@@ -108,6 +112,14 @@ int main(void)
 	/* Initialize the library */
 	if (!glfwInit())
 		return -1;
+    
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE,GLFW_OPENGL_CORE_PROFILE);
+    
+#ifdef __APPLE__
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT,GL_TRUE);
+#endif
 
 	/* Create a windowed mode window and its OpenGL context */
 	window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
@@ -139,9 +151,9 @@ int main(void)
 	CreateShaderWithFile("res/test.shader",source);
 	GLuint shader = CreateShader(source.vertex,source.fragment);
 
-	DrawWithOnlyVBO test1;
-	test1.Prepare();
-	test1.SetShader(shader);
+//	DrawWithOnlyVBO test1;
+//	test1.Prepare();
+//	test1.SetShader(shader);
 
 	DrawWithVAO test2;
 	test2.Prepare();
@@ -155,10 +167,11 @@ int main(void)
 	while (!glfwWindowShouldClose(window))
 	{
 		/* Render here */
+//        glClearColor(0.5,0.8,0.5,1.0);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		//test1.Renderer();
-		//test2.Renderer();
+//		test1.Renderer();
+		test2.Renderer();
 		test3.Renderer();
 
 		/* Swap front and back buffers */

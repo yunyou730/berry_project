@@ -10,6 +10,7 @@
 
 #include "DrawWithOnlyVBO.h"
 #include "DrawWithVAO.h"
+#include "DrawWithEBO.h"
 
 struct ShaderSource
 {
@@ -142,10 +143,13 @@ int main(void)
 	test1.Prepare();
 	test1.SetShader(shader);
 
-
 	DrawWithVAO test2;
 	test2.Prepare();
 	test2.SetShader(shader);
+
+	DrawWithEBO test3;
+	test3.Prepare();
+	test3.SetShader(shader);
 
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
@@ -153,8 +157,9 @@ int main(void)
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		test1.Renderer();
-		test2.Renderer();
+		//test1.Renderer();
+		//test2.Renderer();
+		test3.Renderer();
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);

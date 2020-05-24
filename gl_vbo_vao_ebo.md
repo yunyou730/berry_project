@@ -119,6 +119,29 @@ VAO 配合 VBO 绘制的步骤
 
 如果不使用 VAO ,则每次绘制 VBO 之前 ,需要手动调用 glEnableVertexAttribArray, 控制每个 shader 的参数 是否开启  
 
+--------------
+
+经测试 ,使用 VAO VBO EBO 的初始化顺序 这样最稳: 
+
+生成 VAO,VBO,EBO  
+绑定 VAO 
+绑定 VBO, 设置 VBO 数据 
+绑定 EBO, 设置 EBO 数据 
+设置 shader 参数数据 
+接触绑定 VAO .注意,这一步绝不可以解除绑定 VBO ,EBO  
+
+绘制时 
+绑定 VAO 
+调用 OpenGL 绘制函数 
+
+OK 
+
+相当于 绑定 VAO 之后, 做了一系列的操作 ,这些操作被"记录"到 VAO 里, 
+在绘制时, 只需要做 "绑定VAO" 这一个操作,即可完成 在初始化 VAO 时设置的所有 对 VBO, EBO,shader参数的操作  
+
+即 VAO 初始化时,相当于把一系列复杂的操作"打包" , 在绘制时简化为 "绑定VAO" 这样一个操作,即可顺利绘制  
+ 
+ 
 
 
   

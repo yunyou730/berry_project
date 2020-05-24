@@ -141,17 +141,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="source\Actor.cpp" />
+    <ClCompile Include="source\DrawTestcaseBase.cpp" />
+    <ClCompile Include="source\DrawWithEBO.cpp" />
+    <ClCompile Include="source\DrawWithOnlyVBO.cpp" />
+    <ClCompile Include="source\DrawWithVAO.cpp" />
     <ClCompile Include="source\GLUtil.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\ShaderManager.cpp" />
-    <ClCompile Include="source\Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Actor.h" />
+    <ClInclude Include="source\DrawTestcaseBase.h" />
+    <ClInclude Include="source\DrawWithEBO.h" />
+    <ClInclude Include="source\DrawWithOnlyVBO.h" />
+    <ClInclude Include="source\DrawWithVAO.h" />
     <ClInclude Include="source\GLUtil.h" />
     <ClInclude Include="source\ShaderManager.h" />
-    <ClInclude Include="source\Triangle.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\test.shader" />

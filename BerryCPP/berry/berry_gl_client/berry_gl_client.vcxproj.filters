@@ -10,14 +10,11 @@
     <Filter Include="res">
       <UniqueIdentifier>{382475b9-05fb-49a3-87fc-4feb7e0a0ad7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\testcase">
+      <UniqueIdentifier>{5c29f958-2f80-4721-ad2f-4040739bd188}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\Actor.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Triangle.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="source\ShaderManager.cpp">
       <Filter>src\Shader</Filter>
     </ClCompile>
@@ -27,19 +24,37 @@
     <ClCompile Include="source\GLUtil.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="source\DrawWithEBO.cpp">
+      <Filter>src\testcase</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DrawWithOnlyVBO.cpp">
+      <Filter>src\testcase</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DrawWithVAO.cpp">
+      <Filter>src\testcase</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DrawTestcaseBase.cpp">
+      <Filter>src\testcase</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="source\Actor.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Triangle.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="source\ShaderManager.h">
       <Filter>src\Shader</Filter>
     </ClInclude>
     <ClInclude Include="source\GLUtil.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DrawWithEBO.h">
+      <Filter>src\testcase</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DrawWithOnlyVBO.h">
+      <Filter>src\testcase</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DrawWithVAO.h">
+      <Filter>src\testcase</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DrawTestcaseBase.h">
+      <Filter>src\testcase</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

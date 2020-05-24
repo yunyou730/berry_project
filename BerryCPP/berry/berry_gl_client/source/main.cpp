@@ -7,7 +7,9 @@
 #include <fstream>
 #include <sstream>
 #include "GLUtil.h"
-#include <cassert>
+
+#include "DrawWithOnlyVBO.h"
+#include "DrawWithVAO.h"
 
 struct ShaderSource
 {
@@ -131,33 +133,19 @@ int main(void)
 	const GLubyte* version = glGetString(GL_VERSION);
 	std::cout << "GL info\n" << "[vendor]" << vendor << std::endl << "[version]" << version << std::endl;
 	
-	
-	//GLCALL(glGetString(GL_VENDOR));
-	//GLCALL(glGetString(GL_ERROR_REGAL));
-	
-	
-	// buffer handle
-	float position[6] = {
-		-0.5, -0.5,
-		 0.0,  0.5,
-		 0.5, -0.5,
-	};
-
-	GLuint	buffer;
-	glGenBuffers(1,&buffer);
-	glBindBuffer(GL_ARRAY_BUFFER, buffer);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 6, position, GL_STATIC_DRAW);
-	
-	glEnableVertexAttribArray(0); 
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT) * 2, 0);
-
-	glDisableVertexAttribArray(0);
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-
 
 	ShaderSource source;
 	CreateShaderWithFile("res/test.shader",source);
 	GLuint shader = CreateShader(source.vertex,source.fragment);
+
+	DrawWithOnlyVBO test1;
+	test1.Prepare();
+	test1.SetShader(shader);
+
+
+	DrawWithVAO test2;
+	test2.Prepare();
+	test2.SetShader(shader);
 
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
@@ -165,14 +153,8 @@ int main(void)
 		/* Render here */
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		glBindBuffer(GL_ARRAY_BUFFER, buffer);
-		glEnableVertexAttribArray(0);
-		glUseProgram(shader);
-		// do draw
-		glDrawArrays(GL_TRIANGLES, 0,3);
-		glUseProgram(0);
-		glDisableVertexAttribArray(0);
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		test1.Renderer();
+		test2.Renderer();
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);

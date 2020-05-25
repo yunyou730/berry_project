@@ -151,9 +151,9 @@ int main(void)
 	CreateShaderWithFile("res/test.shader",source);
 	GLuint shader = CreateShader(source.vertex,source.fragment);
 
-//	DrawWithOnlyVBO test1;
-//	test1.Prepare();
-//	test1.SetShader(shader);
+	//DrawWithOnlyVBO test1;
+	//test1.Prepare();
+	//test1.SetShader(shader);
 
 	DrawWithVAO test2;
 	test2.Prepare();
@@ -170,7 +170,7 @@ int main(void)
 //        glClearColor(0.5,0.8,0.5,1.0);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-//		test1.Renderer();
+		//test1.Renderer();
 		test2.Renderer();
 		test3.Renderer();
 

@@ -1,3 +1,47 @@
+VAO, VBO,EBO 使用总结
+
+VBO 可以定义 c++ 顶点数组 ,并通过 glBufferData() 把数据传递到 GPU 中  
+VBO 想要和 shader 属性绑定,必须通过 glVertexAttribPointer() ,此时 如果 OpenGL 是 Core Profile 模式,则必须借助 VAO  
+VAO 可以记录 绑定了哪写 VBO,开启了哪写 shader 属性, shader 属性 和 vbo 数据的映射关系  
+
+在绘制时, 只需要 glUseProgram, glBindVertexArray 绑定了 VAO ,即可完成绘制  
+
+如果绘制时使用了 EBO ,绘制时在指定了 VAO 之后,还要 手动 bind  EBO 才能使 EBO 发挥作用   
+
+
+准备数据阶段: 
+
+生成 VAO 
+生成 VBO 
+VBO 准备数据  
+VBO 传递数据到 GPU  
+
+记录开启 shader 属性 
+映射 VBO 和 shader 属性关系  
+
+至此 VAO ,VBO 顶点数据准备完毕 
+
+-----------
+清理 VAO,VBO 的绑定状态,给 VAO ,VBO 解除 绑定 
+
+----------
+生成 EBO 
+准备 EBO 数据 
+EBO 数据传递到  GPU  
+
+解除 EBO 绑定 
+ 
+----------
+
+绘制阶段: 
+
+指定 shader   
+绑定 VAO  
+绑定 EBO  
+绘制 
+
+----------
+这条横线以下的说法有得可能是错误得 
 
 
 [https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/](https://learnopengl-cn.github.io/01%20Getting%20started/04%20Hello%20Triangle/)

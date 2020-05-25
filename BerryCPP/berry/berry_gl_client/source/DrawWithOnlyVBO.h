@@ -5,6 +5,10 @@
 
 #include "DrawTestcaseBase.h"
 
+/*
+	不使用 VAO 绘制的示例  
+	在 OpenGL Core Profile 下会由于没有生成 VAO 报错 
+*/
 class DrawWithOnlyVBO : public DrawTestcaseBase
 {
 public:

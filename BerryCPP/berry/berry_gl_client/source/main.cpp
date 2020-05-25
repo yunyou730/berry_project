@@ -11,6 +11,8 @@
 #include "DrawWithOnlyVBO.h"
 #include "DrawWithVAO.h"
 #include "DrawWithEBO.h"
+#include "DrawPosColor.h"
+#include "DrawPosColorMixVBO.h"
 
 struct ShaderSource
 {
@@ -151,6 +153,10 @@ int main(void)
 	CreateShaderWithFile("res/test.shader",source);
 	GLuint shader = CreateShader(source.vertex,source.fragment);
 
+	ShaderSource source2;
+	CreateShaderWithFile("res/test2.shader", source2);
+	GLuint shader2 = CreateShader(source2.vertex, source2.fragment);
+
 	//DrawWithOnlyVBO test1;
 	//test1.Prepare();
 	//test1.SetShader(shader);
@@ -163,6 +169,14 @@ int main(void)
 	test3.Prepare();
 	test3.SetShader(shader);
 
+	DrawPosColor test4;
+	test4.Prepare();
+	test4.SetShader(shader2);
+
+	DrawPosColorMixVBO test5;
+	test5.Prepare();
+	test5.SetShader(shader2);
+
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
@@ -171,8 +185,10 @@ int main(void)
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		//test1.Renderer();
-		test2.Renderer();
-		test3.Renderer();
+		//test2.Renderer();
+		//test3.Renderer();
+		//test4.Renderer();
+		test5.Renderer();
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);
@@ -182,6 +198,7 @@ int main(void)
 	}
 
 	glDeleteShader(shader);
+	glDeleteShader(shader2);
 
 	glfwTerminate();
 	return 0;

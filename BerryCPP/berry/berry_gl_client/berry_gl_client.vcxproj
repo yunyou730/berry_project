@@ -141,6 +141,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\DrawPosColor.cpp" />
+    <ClCompile Include="source\DrawPosColorMixVBO.cpp" />
     <ClCompile Include="source\DrawTestcaseBase.cpp" />
     <ClCompile Include="source\DrawWithEBO.cpp" />
     <ClCompile Include="source\DrawWithOnlyVBO.cpp" />
@@ -150,6 +152,8 @@
     <ClCompile Include="source\ShaderManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\DrawPosColor.h" />
+    <ClInclude Include="source\DrawPosColorMixVBO.h" />
     <ClInclude Include="source\DrawTestcaseBase.h" />
     <ClInclude Include="source\DrawWithEBO.h" />
     <ClInclude Include="source\DrawWithOnlyVBO.h" />
@@ -159,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\test.shader" />
+    <None Include="res\test2.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

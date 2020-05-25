@@ -1,18 +1,18 @@
 #pragma once
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "DrawTestcaseBase.h"
 
 /*
-	简单的EBO 示例 
-
-	使用一个 VAO 对应一个 顶点位置 VBO  
-	生成 EBO 进行 绘制 
+	1个VAO 对应 1个混合数据 VBO 的示例 
+	VBO 里混合包含 顶点位置,顶点颜色信息 	
+	最终使用 ebo 绘制
 */
-class DrawWithEBO : public DrawTestcaseBase
+class DrawPosColorMixVBO : public DrawTestcaseBase
 {
 public:
-	~DrawWithEBO();
+	~DrawPosColorMixVBO();
 
 	virtual void Prepare() override;
 	virtual void Renderer() override;
@@ -21,6 +21,9 @@ private:
 	GLuint	m_vao = 0;
 	GLuint	m_vbo = 0;
 	GLuint	m_ebo = 0;
-	float* m_vertice = nullptr;
+
+	// 顶点位置信息
+	float* m_buffer = nullptr;
+	// 顶点顺序 
 	unsigned int* m_indice = nullptr;
 };

@@ -36,6 +36,12 @@
     <ClCompile Include="source\DrawTestcaseBase.cpp">
       <Filter>src\testcase</Filter>
     </ClCompile>
+    <ClCompile Include="source\DrawPosColor.cpp">
+      <Filter>src\testcase</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DrawPosColorMixVBO.cpp">
+      <Filter>src\testcase</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ShaderManager.h">
@@ -56,9 +62,18 @@
     <ClInclude Include="source\DrawTestcaseBase.h">
       <Filter>src\testcase</Filter>
     </ClInclude>
+    <ClInclude Include="source\DrawPosColor.h">
+      <Filter>src\testcase</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DrawPosColorMixVBO.h">
+      <Filter>src\testcase</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\test.shader">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\test2.shader">
       <Filter>res</Filter>
     </None>
   </ItemGroup>

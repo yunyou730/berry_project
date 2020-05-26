@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F5D5059247D747900089B8C /* DrawPosColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D5055247D747900089B8C /* DrawPosColor.cpp */; };
+		0F5D505A247D747900089B8C /* DrawPosColorMixVBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D5057247D747900089B8C /* DrawPosColorMixVBO.cpp */; };
+		0F5D505C247D74AB00089B8C /* test2.shader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0F5D505B247D74A500089B8C /* test2.shader */; };
 		0F9159D1247A308200A5DD65 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9159D0247A308200A5DD65 /* OpenGL.framework */; };
 		0F9159E2247A369D00A5DD65 /* libGLEW.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9159DC247A329000A5DD65 /* libGLEW.2.1.dylib */; };
 		0F9159E3247A36A100A5DD65 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9159DA247A322600A5DD65 /* libglfw.3.dylib */; };
@@ -27,6 +30,7 @@
 			dstPath = res;
 			dstSubfolderSpec = 16;
 			files = (
+				0F5D505C247D74AB00089B8C /* test2.shader in CopyFiles */,
 				0F9159E6247A375800A5DD65 /* test.shader in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +38,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0F5D5055247D747900089B8C /* DrawPosColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawPosColor.cpp; path = ../../BerryCPP/berry/berry_gl_client/source/DrawPosColor.cpp; sourceTree = "<group>"; };
+		0F5D5056247D747900089B8C /* DrawPosColorMixVBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawPosColorMixVBO.h; path = ../../BerryCPP/berry/berry_gl_client/source/DrawPosColorMixVBO.h; sourceTree = "<group>"; };
+		0F5D5057247D747900089B8C /* DrawPosColorMixVBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawPosColorMixVBO.cpp; path = ../../BerryCPP/berry/berry_gl_client/source/DrawPosColorMixVBO.cpp; sourceTree = "<group>"; };
+		0F5D5058247D747900089B8C /* DrawPosColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawPosColor.h; path = ../../BerryCPP/berry/berry_gl_client/source/DrawPosColor.h; sourceTree = "<group>"; };
+		0F5D505B247D74A500089B8C /* test2.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = test2.shader; sourceTree = "<group>"; };
 		0F9159D0247A308200A5DD65 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		0F9159D8247A320900A5DD65 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../3rd/osx/glew/2.1.0_1/lib/libGLEW.a; sourceTree = "<group>"; };
 		0F9159DA247A322600A5DD65 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../3rd/osx/glfw/3.3.1/lib/libglfw.3.dylib; sourceTree = "<group>"; };
@@ -83,6 +92,7 @@
 		0F9159E4247A372900A5DD65 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				0F5D505B247D74A500089B8C /* test2.shader */,
 				0F9159E5247A372900A5DD65 /* test.shader */,
 			);
 			name = res;
@@ -110,6 +120,10 @@
 		0FD52D56247A2D2200185C5C /* berry_mac */ = {
 			isa = PBXGroup;
 			children = (
+				0F5D5055247D747900089B8C /* DrawPosColor.cpp */,
+				0F5D5058247D747900089B8C /* DrawPosColor.h */,
+				0F5D5057247D747900089B8C /* DrawPosColorMixVBO.cpp */,
+				0F5D5056247D747900089B8C /* DrawPosColorMixVBO.h */,
 				0FD52D66247A2D4E00185C5C /* DrawTestcaseBase.cpp */,
 				0FD52D68247A2D4E00185C5C /* DrawTestcaseBase.h */,
 				0FD52D62247A2D4E00185C5C /* DrawWithEBO.cpp */,
@@ -184,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5D5059247D747900089B8C /* DrawPosColor.cpp in Sources */,
 				0FD52D6F247A2D4E00185C5C /* DrawTestcaseBase.cpp in Sources */,
 				0FD52D6C247A2D4E00185C5C /* DrawWithEBO.cpp in Sources */,
 				0FD52D6B247A2D4E00185C5C /* DrawWithVAO.cpp in Sources */,
@@ -191,6 +206,7 @@
 				0FD52D6D247A2D4E00185C5C /* main.cpp in Sources */,
 				0FD52D70247A2D4E00185C5C /* ShaderManager.cpp in Sources */,
 				0FD52D6E247A2D4E00185C5C /* DrawWithOnlyVBO.cpp in Sources */,
+				0F5D505A247D747900089B8C /* DrawPosColorMixVBO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

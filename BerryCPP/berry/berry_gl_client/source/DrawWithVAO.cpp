@@ -1,5 +1,5 @@
 #include "DrawWithVAO.h"
-#include "GLUtil.h"
+#include "Renderer.h"
 
 DrawWithVAO::~DrawWithVAO()
 {

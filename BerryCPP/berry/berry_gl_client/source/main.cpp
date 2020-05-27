@@ -6,7 +6,7 @@
 //#include "source/ShaderManager.h"
 #include <fstream>
 #include <sstream>
-#include "GLUtil.h"
+#include "Renderer.h"
 
 #include "DrawWithOnlyVBO.h"
 #include "DrawWithVAO.h"
@@ -123,8 +123,14 @@ int main(void)
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT,GL_TRUE);
 #endif
 
+	//bool isFullScreen = true;
+	//GLFWmonitor* pMonitor = isFullScreen ? glfwGetPrimaryMonitor() : NULL;
+	//const GLFWvidmode * mode = glfwGetVideoMode(pMonitor);
+
+
 	/* Create a windowed mode window and its OpenGL context */
-	window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+	//window = glfwCreateWindow(mode->width, mode->height, "Hello World", pMonitor, NULL);
+	window = glfwCreateWindow(640,480, "Hello World", nullptr, NULL);
 	if (!window)
 	{
 		glfwTerminate();

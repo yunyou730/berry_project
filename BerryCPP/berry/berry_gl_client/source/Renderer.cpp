@@ -1,4 +1,4 @@
-#include "GLUtil.h"
+#include "Renderer.h"
 #include <stdio.h>
 
 void berry::GLCleanError()
@@ -11,7 +11,7 @@ bool berry::GLCheckError()
 	bool bHasErr = false;
 	while (GLenum err = glGetError())
 	{
-		printf("[OpenGL Error] 0x%x\n",err);
+		printf("[OpenGL Error] 0x%x\n", err);
 		bHasErr = true;
 	}
 	return !bHasErr;

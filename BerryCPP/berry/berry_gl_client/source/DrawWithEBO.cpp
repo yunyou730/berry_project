@@ -1,5 +1,5 @@
 #include "DrawWithEBO.h"
-#include "GLUtil.h"
+#include "Renderer.h"
 
 DrawWithEBO::~DrawWithEBO()
 {

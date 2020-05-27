@@ -21,9 +21,6 @@
     <ClCompile Include="source\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="source\GLUtil.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="source\DrawWithEBO.cpp">
       <Filter>src\testcase</Filter>
     </ClCompile>
@@ -42,13 +39,16 @@
     <ClCompile Include="source\DrawPosColorMixVBO.cpp">
       <Filter>src\testcase</Filter>
     </ClCompile>
+    <ClCompile Include="source\Renderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="source\VertexBuffer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ShaderManager.h">
       <Filter>src\Shader</Filter>
-    </ClInclude>
-    <ClInclude Include="source\GLUtil.h">
-      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="source\DrawWithEBO.h">
       <Filter>src\testcase</Filter>
@@ -67,6 +67,12 @@
     </ClInclude>
     <ClInclude Include="source\DrawPosColorMixVBO.h">
       <Filter>src\testcase</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Renderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="source\VertexBuffer.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

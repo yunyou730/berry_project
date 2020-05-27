@@ -1,5 +1,5 @@
 #include "DrawPosColor.h"
-#include "GLUtil.h"
+#include "Renderer.h"
 
 DrawPosColor::~DrawPosColor()
 {

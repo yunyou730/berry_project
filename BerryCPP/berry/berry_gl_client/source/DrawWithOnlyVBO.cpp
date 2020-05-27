@@ -1,5 +1,5 @@
 #include "DrawWithOnlyVBO.h"
-#include "GLUtil.h"
+#include "Renderer.h"
 
 DrawWithOnlyVBO::~DrawWithOnlyVBO()
 {

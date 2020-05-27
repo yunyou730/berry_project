@@ -1,5 +1,5 @@
 #include "DrawPosColorMixVBO.h"
-#include "GLUtil.h"
+#include "Renderer.h"
 
 DrawPosColorMixVBO::~DrawPosColorMixVBO()
 {

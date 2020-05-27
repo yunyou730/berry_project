@@ -5,6 +5,15 @@ DrawWithEBO::~DrawWithEBO()
 {
 	delete[] m_vertice;
 	delete[] m_indice;
+    
+    glDeleteBuffers(1,&m_ebo);
+    glDeleteVertexArrays(1,&m_vao);
+    
+    if(m_vertexBuffer != nullptr)
+    {
+        delete m_vertexBuffer;
+        m_vertexBuffer = nullptr;
+    }
 }
 
 void DrawWithEBO::Prepare()
@@ -18,16 +27,17 @@ void DrawWithEBO::Prepare()
 	m_vertice[index++] =  1.0; m_vertice[index++] =  0.5;
 
 	glGenVertexArrays(1, &m_vao);
-	glGenBuffers(1, &m_vbo);
+    
+    m_vertexBuffer = new berry::VertexBuffer(m_vertice,8);
 
 	glBindVertexArray(m_vao);
-	glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
+    m_vertexBuffer->Bind();
 	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 8, m_vertice, GL_STATIC_DRAW);
 	
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT) * 2, 0);
 	
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
+    m_vertexBuffer->UnBind();
 	glBindVertexArray(0);
 
 	// EBO 

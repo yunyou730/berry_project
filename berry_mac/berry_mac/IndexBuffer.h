@@ -5,12 +5,13 @@ namespace berry
 	class IndexBuffer
 	{
 	public:
-		IndexBuffer(const void* data,unsigned int size);
+		IndexBuffer(const unsigned int* data,unsigned int size);
+        ~IndexBuffer();
 
 		void Bind();
 		void UnBind();
 	private:
 		unsigned int m_bufferID;
-		int		m_count;
+		int		     m_count;
 	};
 }

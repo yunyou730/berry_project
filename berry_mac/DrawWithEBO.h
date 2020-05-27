@@ -2,12 +2,12 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "DrawTestcaseBase.h"
+#include "Renderer.h"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 /*
-	简单的EBO 示例 
-
-	使用一个 VAO 对应一个 顶点位置 VBO  
-	生成 EBO 进行 绘制 
+ Draw with simple VAO,VBO,EBO
 */
 class DrawWithEBO : public DrawTestcaseBase
 {
@@ -19,8 +19,9 @@ public:
 
 private:
 	GLuint	m_vao = 0;
-	GLuint	m_vbo = 0;
 	GLuint	m_ebo = 0;
 	float* m_vertice = nullptr;
 	unsigned int* m_indice = nullptr;
+    
+    berry::VertexBuffer*    m_vertexBuffer = nullptr;
 };

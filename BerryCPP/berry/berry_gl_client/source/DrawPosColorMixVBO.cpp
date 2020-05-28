@@ -1,17 +1,16 @@
 #include "DrawPosColorMixVBO.h"
 #include "Renderer.h"
+using namespace berry;
 
 DrawPosColorMixVBO::~DrawPosColorMixVBO()
 {
 	glDeleteVertexArrays(1, &m_vao);
-	glDeleteBuffers(1, &m_vbo);
-	glDeleteBuffers(1, &m_ebo);
 
-	delete[] m_buffer;
-	delete[] m_indice;
+	SAFE_DELETE(m_vertexBuffer);
+	SAFE_DELETE(m_indexBuffer);
 	
-	m_buffer = nullptr;
-	m_indice = nullptr;
+	SAFE_DELETE_ARRAY(m_buffer);
+	SAFE_DELETE_ARRAY(m_indice);
 }
 
 void DrawPosColorMixVBO::Prepare()
@@ -43,29 +42,23 @@ void DrawPosColorMixVBO::Prepare()
 	m_indice[index++] = 2;
 
 	glGenVertexArrays(1, &m_vao);
-	glGenBuffers(1, &m_vbo);
-	glGenBuffers(1, &m_ebo);
+	m_vertexBuffer = new berry::VertexBuffer(m_buffer, sizeof(float) * 24);
 
 	// VAO
 	glBindVertexArray(m_vao);
 
-	glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 24, m_buffer, GL_STATIC_DRAW);
-
+	m_vertexBuffer->Bind();
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT) * 6, 0);
-
 	GLCALL(glEnableVertexAttribArray(1));
 	GLCALL(glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT) * 6, (void*)(sizeof(GL_FLOAT) * 2)));
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
-	
-	// EBO
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,m_ebo);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int) * 6, m_indice, GL_STATIC_DRAW);
 
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	// EBO
+	m_indexBuffer = new berry::IndexBuffer(m_indice, 6);
+	m_indexBuffer->UnBind();
 }
 
 void DrawPosColorMixVBO::Renderer()
@@ -73,12 +66,12 @@ void DrawPosColorMixVBO::Renderer()
 	// pre draw
 	glUseProgram(m_shaderID);
 	glBindVertexArray(m_vao);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
+	m_indexBuffer->Bind();
 
 	// do draw
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 	// after draw
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+	m_indexBuffer->UnBind();
 	glBindVertexArray(0);
 }

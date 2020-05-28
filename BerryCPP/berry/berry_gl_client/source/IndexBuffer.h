@@ -1,3 +1,4 @@
+#pragma once
 #include <GL/glew.h>
 
 namespace berry
@@ -5,7 +6,7 @@ namespace berry
 	class IndexBuffer
 	{
 	public:
-		IndexBuffer(const unsigned int* data,unsigned int size);
+		IndexBuffer(const unsigned int* data,int count);
         ~IndexBuffer();
 
 		void Bind();

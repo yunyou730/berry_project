@@ -175,7 +175,7 @@ int main(void)
 	test3.Prepare();
 	test3.SetShader(shader);
     
-    /*
+    
 	DrawPosColor test4;
 	test4.Prepare();
 	test4.SetShader(shader2);
@@ -183,8 +183,7 @@ int main(void)
 	DrawPosColorMixVBO test5;
 	test5.Prepare();
 	test5.SetShader(shader2);
-    */
-
+    
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
@@ -195,8 +194,8 @@ int main(void)
 		//test1.Renderer();
 		test2.Renderer();
 		test3.Renderer();
-		//test4.Renderer();
-//		test5.Renderer();
+		test4.Renderer();
+		test5.Renderer();
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);

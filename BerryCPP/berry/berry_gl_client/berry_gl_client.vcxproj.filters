@@ -13,6 +13,9 @@
     <Filter Include="src\testcase">
       <UniqueIdentifier>{5c29f958-2f80-4721-ad2f-4040739bd188}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\gl">
+      <UniqueIdentifier>{0576a7db-accc-4fc6-a436-3b451fcfe506}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\ShaderManager.cpp">
@@ -39,11 +42,14 @@
     <ClCompile Include="source\DrawPosColorMixVBO.cpp">
       <Filter>src\testcase</Filter>
     </ClCompile>
-    <ClCompile Include="source\Renderer.cpp">
-      <Filter>src</Filter>
+    <ClCompile Include="source\IndexBuffer.cpp">
+      <Filter>src\gl</Filter>
     </ClCompile>
     <ClCompile Include="source\VertexBuffer.cpp">
-      <Filter>src</Filter>
+      <Filter>src\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Renderer.cpp">
+      <Filter>src\gl</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,11 +74,14 @@
     <ClInclude Include="source\DrawPosColorMixVBO.h">
       <Filter>src\testcase</Filter>
     </ClInclude>
-    <ClInclude Include="source\Renderer.h">
-      <Filter>src</Filter>
+    <ClInclude Include="source\IndexBuffer.h">
+      <Filter>src\gl</Filter>
     </ClInclude>
     <ClInclude Include="source\VertexBuffer.h">
-      <Filter>src</Filter>
+      <Filter>src\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Renderer.h">
+      <Filter>src\gl</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

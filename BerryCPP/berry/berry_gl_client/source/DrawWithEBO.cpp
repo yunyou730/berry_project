@@ -1,19 +1,22 @@
 #include "DrawWithEBO.h"
 #include "Renderer.h"
+using namespace berry;
 
 DrawWithEBO::~DrawWithEBO()
 {
 	delete[] m_vertice;
 	delete[] m_indice;
-    
-    glDeleteBuffers(1,&m_ebo);
-    glDeleteVertexArrays(1,&m_vao);
-    
     if(m_vertexBuffer != nullptr)
     {
         delete m_vertexBuffer;
         m_vertexBuffer = nullptr;
     }
+	if (m_indexBuffer != nullptr)
+	{
+		delete m_indexBuffer;
+		m_indexBuffer = nullptr;
+	}
+	glDeleteVertexArrays(1, &m_vao);
 }
 
 void DrawWithEBO::Prepare()
@@ -51,18 +54,16 @@ void DrawWithEBO::Prepare()
 	m_indice[index++] = 3;
 	m_indice[index++] = 2;
 
-	glGenBuffers(1, &m_ebo);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int) * 6, m_indice, GL_STATIC_DRAW);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-	
+	m_indexBuffer = new IndexBuffer(m_indice, 6);
+	m_indexBuffer->UnBind();
 }
 
 void DrawWithEBO::Renderer()
 {
 	glUseProgram(m_shaderID);
 	glBindVertexArray(m_vao);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo);
+	m_indexBuffer->Bind();
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+	m_indexBuffer->UnBind();
 	glBindVertexArray(0);
 }

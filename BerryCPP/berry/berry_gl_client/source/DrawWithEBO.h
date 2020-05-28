@@ -19,9 +19,10 @@ public:
 
 private:
 	GLuint	m_vao = 0;
-	GLuint	m_ebo = 0;
+	//GLuint	m_ebo = 0;c
 	float* m_vertice = nullptr;
 	unsigned int* m_indice = nullptr;
     
     berry::VertexBuffer*    m_vertexBuffer = nullptr;
+	berry::IndexBuffer*		m_indexBuffer = nullptr;
 };

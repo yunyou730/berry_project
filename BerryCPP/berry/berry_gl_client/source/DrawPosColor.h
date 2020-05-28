@@ -3,6 +3,8 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "DrawTestcaseBase.h"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 /*
 	1个 VAO  对应2个 VBO 的示例 
@@ -22,10 +24,10 @@ public:
 
 private:
 	GLuint	m_vao = 0;
-	GLuint	m_vboVertice = 0;
-	GLuint	m_vboColor = 0;
-	GLuint	m_ebo = 0;
 
+	berry::VertexBuffer* m_posBuffer = nullptr;
+	berry::VertexBuffer* m_colorBuffer = nullptr;
+	berry::IndexBuffer*  m_indexBuffer = nullptr;
 
 	//const static int VERTICE_CNT = 4;
 	// 顶点位置信息

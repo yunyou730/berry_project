@@ -1,10 +1,10 @@
 #include "IndexBuffer.h"
 
-berry::IndexBuffer::IndexBuffer(const unsigned int* data,unsigned int size)
+berry::IndexBuffer::IndexBuffer(const unsigned int* data, int count)
 {
     glGenBuffers(1,&m_bufferID);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,m_bufferID);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER,size,data,GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER,count * sizeof(unsigned int),data,GL_STATIC_DRAW);
 }
 
 berry::IndexBuffer::~IndexBuffer()

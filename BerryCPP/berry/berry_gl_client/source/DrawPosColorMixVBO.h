@@ -3,6 +3,8 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include "DrawTestcaseBase.h"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 /*
 	1个VAO 对应 1个混合数据 VBO 的示例 
@@ -19,8 +21,9 @@ public:
 
 private:
 	GLuint	m_vao = 0;
-	GLuint	m_vbo = 0;
-	GLuint	m_ebo = 0;
+
+	berry::VertexBuffer* m_vertexBuffer = nullptr;
+	berry::IndexBuffer* m_indexBuffer = nullptr;
 
 	// 顶点位置信息
 	float* m_buffer = nullptr;

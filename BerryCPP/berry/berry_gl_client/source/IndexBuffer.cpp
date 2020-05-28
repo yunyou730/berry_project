@@ -1,10 +1,13 @@
 #include "IndexBuffer.h"
+#include <cassert>
 
-berry::IndexBuffer::IndexBuffer(const unsigned int* data, int count)
+berry::IndexBuffer::IndexBuffer(const unsigned int* data,unsigned int count)
+    :m_count(count)
 {
+    assert(sizeof(unsigned int) == sizeof(GLuint));
     glGenBuffers(1,&m_bufferID);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,m_bufferID);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER,count * sizeof(unsigned int),data,GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_count * sizeof(unsigned int),data,GL_STATIC_DRAW);
 }
 
 berry::IndexBuffer::~IndexBuffer()
@@ -12,12 +15,12 @@ berry::IndexBuffer::~IndexBuffer()
     glDeleteBuffers(1,&m_bufferID);
 }
 
-void berry::IndexBuffer::Bind()
+void berry::IndexBuffer::Bind() const
 {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,m_bufferID);
 }
 
-void berry::IndexBuffer::UnBind()
+void berry::IndexBuffer::UnBind() const
 {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,0);
 }

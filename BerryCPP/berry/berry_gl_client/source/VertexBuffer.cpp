@@ -13,12 +13,12 @@ berry::VertexBuffer::~VertexBuffer()
 	glDeleteBuffers(1, &m_rendererID);
 }
 
-void berry::VertexBuffer::Bind()
+void berry::VertexBuffer::Bind() const
 {
 	glBindBuffer(GL_ARRAY_BUFFER, m_rendererID);
 }
 
-void berry::VertexBuffer::UnBind()
+void berry::VertexBuffer::UnBind() const
 {
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 }

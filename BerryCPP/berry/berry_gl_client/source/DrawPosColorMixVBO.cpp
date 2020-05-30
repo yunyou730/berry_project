@@ -4,8 +4,7 @@ using namespace berry;
 
 DrawPosColorMixVBO::~DrawPosColorMixVBO()
 {
-	glDeleteVertexArrays(1, &m_vao);
-
+	SAFE_DELETE(m_vertexArray);
 	SAFE_DELETE(m_vertexBuffer);
 	SAFE_DELETE(m_indexBuffer);
 	
@@ -41,20 +40,17 @@ void DrawPosColorMixVBO::Prepare()
 	m_indice[index++] = 3;
 	m_indice[index++] = 2;
 
-	glGenVertexArrays(1, &m_vao);
+	m_vertexArray = new berry::VertexArray();
+	VertexBufferLayout layout;
 	m_vertexBuffer = new berry::VertexBuffer(m_buffer, sizeof(float) * 24);
 
 	// VAO
-	glBindVertexArray(m_vao);
-
-	m_vertexBuffer->Bind();
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT) * 6, 0);
-	GLCALL(glEnableVertexAttribArray(1));
-	GLCALL(glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT) * 6, (void*)(sizeof(GL_FLOAT) * 2)));
-
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindVertexArray(0);
+	layout.Push<float>(2);
+	layout.Push<float>(4);
+	m_vertexArray->AddBuffer(*m_vertexBuffer, layout);
+	
+	m_vertexBuffer->UnBind();
+	m_vertexArray->UnBind();
 
 	// EBO
 	m_indexBuffer = new berry::IndexBuffer(m_indice, 6);
@@ -65,7 +61,8 @@ void DrawPosColorMixVBO::Renderer()
 {
 	// pre draw
 	glUseProgram(m_shaderID);
-	glBindVertexArray(m_vao);
+	
+	m_vertexArray->Bind();
 	m_indexBuffer->Bind();
 
 	// do draw

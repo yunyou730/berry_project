@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F5D5059247D747900089B8C /* DrawPosColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D5055247D747900089B8C /* DrawPosColor.cpp */; };
-		0F5D505A247D747900089B8C /* DrawPosColorMixVBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5D5057247D747900089B8C /* DrawPosColorMixVBO.cpp */; };
+		0F5BFBA52483F52500ADCCCC /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB8C2483F52500ADCCCC /* VertexBuffer.cpp */; };
+		0F5BFBA62483F52500ADCCCC /* DrawWithEBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB8D2483F52500ADCCCC /* DrawWithEBO.cpp */; };
+		0F5BFBA72483F52500ADCCCC /* DrawPosColorMixVBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB8E2483F52500ADCCCC /* DrawPosColorMixVBO.cpp */; };
+		0F5BFBA82483F52500ADCCCC /* IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB8F2483F52500ADCCCC /* IndexBuffer.cpp */; };
+		0F5BFBA92483F52500ADCCCC /* DrawWithVAO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB922483F52500ADCCCC /* DrawWithVAO.cpp */; };
+		0F5BFBAA2483F52500ADCCCC /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB942483F52500ADCCCC /* Renderer.cpp */; };
+		0F5BFBAB2483F52500ADCCCC /* DrawPosColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB952483F52500ADCCCC /* DrawPosColor.cpp */; };
+		0F5BFBAC2483F52500ADCCCC /* DrawTestcaseBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB972483F52500ADCCCC /* DrawTestcaseBase.cpp */; };
+		0F5BFBAD2483F52500ADCCCC /* VertexArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB982483F52500ADCCCC /* VertexArray.cpp */; };
+		0F5BFBAE2483F52500ADCCCC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB9A2483F52500ADCCCC /* main.cpp */; };
+		0F5BFBAF2483F52500ADCCCC /* VertexBufferLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB9B2483F52500ADCCCC /* VertexBufferLayout.cpp */; };
+		0F5BFBB02483F52500ADCCCC /* DrawWithOnlyVBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFB9C2483F52500ADCCCC /* DrawWithOnlyVBO.cpp */; };
+		0F5BFBB52483F71E00ADCCCC /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0F5BFBB42483F71E00ADCCCC /* Shader.cpp */; };
 		0F5D505C247D74AB00089B8C /* test2.shader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0F5D505B247D74A500089B8C /* test2.shader */; };
 		0F9159D1247A308200A5DD65 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9159D0247A308200A5DD65 /* OpenGL.framework */; };
 		0F9159E2247A369D00A5DD65 /* libGLEW.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9159DC247A329000A5DD65 /* libGLEW.2.1.dylib */; };
 		0F9159E3247A36A100A5DD65 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9159DA247A322600A5DD65 /* libglfw.3.dylib */; };
 		0F9159E6247A375800A5DD65 /* test.shader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0F9159E5247A372900A5DD65 /* test.shader */; };
-		0FAFC6AB247EECB30037A1CD /* IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFC6A8247EECB30037A1CD /* IndexBuffer.cpp */; };
-		0FAFC6AC247EECB30037A1CD /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFC6A9247EECB30037A1CD /* VertexBuffer.cpp */; };
-		0FAFC6AE247EECD00037A1CD /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FAFC6AD247EECD00037A1CD /* Renderer.cpp */; };
-		0FD52D6B247A2D4E00185C5C /* DrawWithVAO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FD52D5F247A2D4E00185C5C /* DrawWithVAO.cpp */; };
-		0FD52D6C247A2D4E00185C5C /* DrawWithEBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FD52D62247A2D4E00185C5C /* DrawWithEBO.cpp */; };
-		0FD52D6D247A2D4E00185C5C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FD52D63247A2D4E00185C5C /* main.cpp */; };
-		0FD52D6E247A2D4E00185C5C /* DrawWithOnlyVBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FD52D65247A2D4E00185C5C /* DrawWithOnlyVBO.cpp */; };
-		0FD52D6F247A2D4E00185C5C /* DrawTestcaseBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FD52D66247A2D4E00185C5C /* DrawTestcaseBase.cpp */; };
-		0FD52D70247A2D4E00185C5C /* ShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FD52D67247A2D4E00185C5C /* ShaderManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,34 +42,38 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0F5D5055247D747900089B8C /* DrawPosColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawPosColor.cpp; sourceTree = "<group>"; };
-		0F5D5056247D747900089B8C /* DrawPosColorMixVBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPosColorMixVBO.h; sourceTree = "<group>"; };
-		0F5D5057247D747900089B8C /* DrawPosColorMixVBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawPosColorMixVBO.cpp; sourceTree = "<group>"; };
-		0F5D5058247D747900089B8C /* DrawPosColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPosColor.h; sourceTree = "<group>"; };
+		0F5BFB8C2483F52500ADCCCC /* VertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexBuffer.cpp; sourceTree = "<group>"; };
+		0F5BFB8D2483F52500ADCCCC /* DrawWithEBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawWithEBO.cpp; path = ../BerryCPP/berry/berry_gl_client/source/DrawWithEBO.cpp; sourceTree = "<group>"; };
+		0F5BFB8E2483F52500ADCCCC /* DrawPosColorMixVBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawPosColorMixVBO.cpp; path = ../BerryCPP/berry/berry_gl_client/source/DrawPosColorMixVBO.cpp; sourceTree = "<group>"; };
+		0F5BFB8F2483F52500ADCCCC /* IndexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexBuffer.cpp; sourceTree = "<group>"; };
+		0F5BFB902483F52500ADCCCC /* DrawPosColorMixVBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawPosColorMixVBO.h; path = ../BerryCPP/berry/berry_gl_client/source/DrawPosColorMixVBO.h; sourceTree = "<group>"; };
+		0F5BFB912483F52500ADCCCC /* DrawTestcaseBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawTestcaseBase.h; path = ../BerryCPP/berry/berry_gl_client/source/DrawTestcaseBase.h; sourceTree = "<group>"; };
+		0F5BFB922483F52500ADCCCC /* DrawWithVAO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawWithVAO.cpp; path = ../BerryCPP/berry/berry_gl_client/source/DrawWithVAO.cpp; sourceTree = "<group>"; };
+		0F5BFB932483F52500ADCCCC /* DrawWithOnlyVBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawWithOnlyVBO.h; path = ../BerryCPP/berry/berry_gl_client/source/DrawWithOnlyVBO.h; sourceTree = "<group>"; };
+		0F5BFB942483F52500ADCCCC /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		0F5BFB952483F52500ADCCCC /* DrawPosColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawPosColor.cpp; path = ../BerryCPP/berry/berry_gl_client/source/DrawPosColor.cpp; sourceTree = "<group>"; };
+		0F5BFB962483F52500ADCCCC /* VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexBuffer.h; sourceTree = "<group>"; };
+		0F5BFB972483F52500ADCCCC /* DrawTestcaseBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawTestcaseBase.cpp; path = ../BerryCPP/berry/berry_gl_client/source/DrawTestcaseBase.cpp; sourceTree = "<group>"; };
+		0F5BFB982483F52500ADCCCC /* VertexArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexArray.cpp; sourceTree = "<group>"; };
+		0F5BFB992483F52500ADCCCC /* VertexBufferLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexBufferLayout.h; sourceTree = "<group>"; };
+		0F5BFB9A2483F52500ADCCCC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../BerryCPP/berry/berry_gl_client/source/main.cpp; sourceTree = "<group>"; };
+		0F5BFB9B2483F52500ADCCCC /* VertexBufferLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexBufferLayout.cpp; sourceTree = "<group>"; };
+		0F5BFB9C2483F52500ADCCCC /* DrawWithOnlyVBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawWithOnlyVBO.cpp; path = ../BerryCPP/berry/berry_gl_client/source/DrawWithOnlyVBO.cpp; sourceTree = "<group>"; };
+		0F5BFB9D2483F52500ADCCCC /* DrawWithVAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawWithVAO.h; path = ../BerryCPP/berry/berry_gl_client/source/DrawWithVAO.h; sourceTree = "<group>"; };
+		0F5BFB9E2483F52500ADCCCC /* IndexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexBuffer.h; sourceTree = "<group>"; };
+		0F5BFB9F2483F52500ADCCCC /* DrawPosColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawPosColor.h; path = ../BerryCPP/berry/berry_gl_client/source/DrawPosColor.h; sourceTree = "<group>"; };
+		0F5BFBA12483F52500ADCCCC /* DrawWithEBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawWithEBO.h; path = ../BerryCPP/berry/berry_gl_client/source/DrawWithEBO.h; sourceTree = "<group>"; };
+		0F5BFBA22483F52500ADCCCC /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		0F5BFBA32483F52500ADCCCC /* VertexArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexArray.h; sourceTree = "<group>"; };
+		0F5BFBB32483F71E00ADCCCC /* Shader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		0F5BFBB42483F71E00ADCCCC /* Shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
 		0F5D505B247D74A500089B8C /* test2.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = test2.shader; sourceTree = "<group>"; };
 		0F9159D0247A308200A5DD65 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		0F9159D8247A320900A5DD65 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = ../3rd/osx/glew/2.1.0_1/lib/libGLEW.a; sourceTree = "<group>"; };
 		0F9159DA247A322600A5DD65 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../3rd/osx/glfw/3.3.1/lib/libglfw.3.dylib; sourceTree = "<group>"; };
 		0F9159DC247A329000A5DD65 /* libGLEW.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.1.dylib; path = ../3rd/osx/glew/2.1.0_1/lib/libGLEW.2.1.dylib; sourceTree = "<group>"; };
 		0F9159E5247A372900A5DD65 /* test.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.shader; sourceTree = "<group>"; };
-		0FAFC6A7247EEC9D0037A1CD /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
-		0FAFC6A8247EECB30037A1CD /* IndexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IndexBuffer.cpp; sourceTree = "<group>"; };
-		0FAFC6A9247EECB30037A1CD /* VertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VertexBuffer.cpp; sourceTree = "<group>"; };
-		0FAFC6AA247EECB30037A1CD /* VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VertexBuffer.h; sourceTree = "<group>"; };
-		0FAFC6AD247EECD00037A1CD /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
-		0FAFC6AF247EECE30037A1CD /* IndexBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndexBuffer.h; sourceTree = "<group>"; };
 		0FD52D54247A2D2200185C5C /* berry_mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = berry_mac; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FD52D5E247A2D4E00185C5C /* DrawWithEBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawWithEBO.h; sourceTree = "<group>"; };
-		0FD52D5F247A2D4E00185C5C /* DrawWithVAO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawWithVAO.cpp; sourceTree = "<group>"; };
-		0FD52D61247A2D4E00185C5C /* ShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderManager.h; path = ../../BerryCPP/berry/berry_gl_client/source/ShaderManager.h; sourceTree = "<group>"; };
-		0FD52D62247A2D4E00185C5C /* DrawWithEBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawWithEBO.cpp; sourceTree = "<group>"; };
-		0FD52D63247A2D4E00185C5C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../BerryCPP/berry/berry_gl_client/source/main.cpp; sourceTree = "<group>"; };
-		0FD52D64247A2D4E00185C5C /* DrawWithOnlyVBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawWithOnlyVBO.h; sourceTree = "<group>"; };
-		0FD52D65247A2D4E00185C5C /* DrawWithOnlyVBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawWithOnlyVBO.cpp; sourceTree = "<group>"; };
-		0FD52D66247A2D4E00185C5C /* DrawTestcaseBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DrawTestcaseBase.cpp; sourceTree = "<group>"; };
-		0FD52D67247A2D4E00185C5C /* ShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderManager.cpp; path = ../../BerryCPP/berry/berry_gl_client/source/ShaderManager.cpp; sourceTree = "<group>"; };
-		0FD52D68247A2D4E00185C5C /* DrawTestcaseBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawTestcaseBase.h; sourceTree = "<group>"; };
-		0FD52D6A247A2D4E00185C5C /* DrawWithVAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawWithVAO.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F5BFB8A2483F51100ADCCCC /* source */ = {
+			isa = PBXGroup;
+			children = (
+				0F5BFBB22483F57300ADCCCC /* testcase */,
+				0F5BFBB12483F55E00ADCCCC /* gl */,
+				0F5BFB9A2483F52500ADCCCC /* main.cpp */,
+			);
+			name = source;
+			sourceTree = "<group>";
+		};
+		0F5BFBB12483F55E00ADCCCC /* gl */ = {
+			isa = PBXGroup;
+			children = (
+				0F5BFBB42483F71E00ADCCCC /* Shader.cpp */,
+				0F5BFBB32483F71E00ADCCCC /* Shader.h */,
+				0F5BFB982483F52500ADCCCC /* VertexArray.cpp */,
+				0F5BFBA32483F52500ADCCCC /* VertexArray.h */,
+				0F5BFB8C2483F52500ADCCCC /* VertexBuffer.cpp */,
+				0F5BFB962483F52500ADCCCC /* VertexBuffer.h */,
+				0F5BFB9B2483F52500ADCCCC /* VertexBufferLayout.cpp */,
+				0F5BFB992483F52500ADCCCC /* VertexBufferLayout.h */,
+				0F5BFB8F2483F52500ADCCCC /* IndexBuffer.cpp */,
+				0F5BFB9E2483F52500ADCCCC /* IndexBuffer.h */,
+				0F5BFB942483F52500ADCCCC /* Renderer.cpp */,
+				0F5BFBA22483F52500ADCCCC /* Renderer.h */,
+			);
+			path = gl;
+			sourceTree = "<group>";
+		};
+		0F5BFBB22483F57300ADCCCC /* testcase */ = {
+			isa = PBXGroup;
+			children = (
+				0F5BFB952483F52500ADCCCC /* DrawPosColor.cpp */,
+				0F5BFB9F2483F52500ADCCCC /* DrawPosColor.h */,
+				0F5BFB8E2483F52500ADCCCC /* DrawPosColorMixVBO.cpp */,
+				0F5BFB902483F52500ADCCCC /* DrawPosColorMixVBO.h */,
+				0F5BFB972483F52500ADCCCC /* DrawTestcaseBase.cpp */,
+				0F5BFB912483F52500ADCCCC /* DrawTestcaseBase.h */,
+				0F5BFB8D2483F52500ADCCCC /* DrawWithEBO.cpp */,
+				0F5BFBA12483F52500ADCCCC /* DrawWithEBO.h */,
+				0F5BFB9C2483F52500ADCCCC /* DrawWithOnlyVBO.cpp */,
+				0F5BFB932483F52500ADCCCC /* DrawWithOnlyVBO.h */,
+				0F5BFB922483F52500ADCCCC /* DrawWithVAO.cpp */,
+				0F5BFB9D2483F52500ADCCCC /* DrawWithVAO.h */,
+			);
+			name = testcase;
+			sourceTree = "<group>";
+		};
 		0F9159C6247A303E00A5DD65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,44 +159,11 @@
 			path = ../BerryCPP/berry/berry_gl_client/res;
 			sourceTree = "<group>";
 		};
-		0FAFC6B0247EED1D0037A1CD /* testcase */ = {
-			isa = PBXGroup;
-			children = (
-				0FD52D68247A2D4E00185C5C /* DrawTestcaseBase.h */,
-				0FD52D62247A2D4E00185C5C /* DrawWithEBO.cpp */,
-				0FD52D5E247A2D4E00185C5C /* DrawWithEBO.h */,
-				0FD52D65247A2D4E00185C5C /* DrawWithOnlyVBO.cpp */,
-				0FD52D64247A2D4E00185C5C /* DrawWithOnlyVBO.h */,
-				0FD52D5F247A2D4E00185C5C /* DrawWithVAO.cpp */,
-				0FD52D6A247A2D4E00185C5C /* DrawWithVAO.h */,
-				0F5D5055247D747900089B8C /* DrawPosColor.cpp */,
-				0F5D5058247D747900089B8C /* DrawPosColor.h */,
-				0F5D5057247D747900089B8C /* DrawPosColorMixVBO.cpp */,
-				0F5D5056247D747900089B8C /* DrawPosColorMixVBO.h */,
-				0FD52D66247A2D4E00185C5C /* DrawTestcaseBase.cpp */,
-			);
-			name = testcase;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		0FAFC6B1247EED3F0037A1CD /* gl_wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				0FAFC6A8247EECB30037A1CD /* IndexBuffer.cpp */,
-				0FAFC6AF247EECE30037A1CD /* IndexBuffer.h */,
-				0FAFC6A9247EECB30037A1CD /* VertexBuffer.cpp */,
-				0FAFC6AA247EECB30037A1CD /* VertexBuffer.h */,
-				0FAFC6A7247EEC9D0037A1CD /* Renderer.h */,
-				0FAFC6AD247EECD00037A1CD /* Renderer.cpp */,
-			);
-			name = gl_wrapper;
-			sourceTree = "<group>";
-		};
 		0FD52D4B247A2D2200185C5C = {
 			isa = PBXGroup;
 			children = (
+				0F5BFB8A2483F51100ADCCCC /* source */,
 				0F9159E4247A372900A5DD65 /* res */,
-				0FD52D56247A2D2200185C5C /* berry_mac */,
 				0FD52D55247A2D2200185C5C /* Products */,
 				0F9159C6247A303E00A5DD65 /* Frameworks */,
 			);
@@ -154,18 +175,6 @@
 				0FD52D54247A2D2200185C5C /* berry_mac */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0FD52D56247A2D2200185C5C /* berry_mac */ = {
-			isa = PBXGroup;
-			children = (
-				0FAFC6B1247EED3F0037A1CD /* gl_wrapper */,
-				0FAFC6B0247EED1D0037A1CD /* testcase */,
-				0FD52D63247A2D4E00185C5C /* main.cpp */,
-				0FD52D67247A2D4E00185C5C /* ShaderManager.cpp */,
-				0FD52D61247A2D4E00185C5C /* ShaderManager.h */,
-			);
-			path = berry_mac;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,17 +234,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F5D5059247D747900089B8C /* DrawPosColor.cpp in Sources */,
-				0FAFC6AC247EECB30037A1CD /* VertexBuffer.cpp in Sources */,
-				0FD52D6F247A2D4E00185C5C /* DrawTestcaseBase.cpp in Sources */,
-				0FD52D6C247A2D4E00185C5C /* DrawWithEBO.cpp in Sources */,
-				0FAFC6AE247EECD00037A1CD /* Renderer.cpp in Sources */,
-				0FD52D6B247A2D4E00185C5C /* DrawWithVAO.cpp in Sources */,
-				0FD52D6D247A2D4E00185C5C /* main.cpp in Sources */,
-				0FD52D70247A2D4E00185C5C /* ShaderManager.cpp in Sources */,
-				0FD52D6E247A2D4E00185C5C /* DrawWithOnlyVBO.cpp in Sources */,
-				0F5D505A247D747900089B8C /* DrawPosColorMixVBO.cpp in Sources */,
-				0FAFC6AB247EECB30037A1CD /* IndexBuffer.cpp in Sources */,
+				0F5BFBB52483F71E00ADCCCC /* Shader.cpp in Sources */,
+				0F5BFBAB2483F52500ADCCCC /* DrawPosColor.cpp in Sources */,
+				0F5BFBAF2483F52500ADCCCC /* VertexBufferLayout.cpp in Sources */,
+				0F5BFBA82483F52500ADCCCC /* IndexBuffer.cpp in Sources */,
+				0F5BFBAC2483F52500ADCCCC /* DrawTestcaseBase.cpp in Sources */,
+				0F5BFBAD2483F52500ADCCCC /* VertexArray.cpp in Sources */,
+				0F5BFBAE2483F52500ADCCCC /* main.cpp in Sources */,
+				0F5BFBA62483F52500ADCCCC /* DrawWithEBO.cpp in Sources */,
+				0F5BFBA52483F52500ADCCCC /* VertexBuffer.cpp in Sources */,
+				0F5BFBAA2483F52500ADCCCC /* Renderer.cpp in Sources */,
+				0F5BFBA92483F52500ADCCCC /* DrawWithVAO.cpp in Sources */,
+				0F5BFBB02483F52500ADCCCC /* DrawWithOnlyVBO.cpp in Sources */,
+				0F5BFBA72483F52500ADCCCC /* DrawPosColorMixVBO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

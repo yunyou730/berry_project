@@ -1,5 +1,6 @@
 #include "DrawWithEBO.h"
 #include "Renderer.h"
+#include "Shader.h"
 using namespace berry;
 
 DrawWithEBO::~DrawWithEBO()
@@ -40,7 +41,7 @@ void DrawWithEBO::Prepare()
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT) * 2, 0);
 	
-    m_vertexBuffer->UnBind();
+    m_vertexBuffer->Unbind();
 	glBindVertexArray(0);
 
 	// EBO 
@@ -55,16 +56,16 @@ void DrawWithEBO::Prepare()
 	m_indice[index++] = 2;
 
 	m_indexBuffer = new IndexBuffer(m_indice, 6);
-	m_indexBuffer->UnBind();
+	m_indexBuffer->Unbind();
 }
 
-void DrawWithEBO::Renderer()
+void DrawWithEBO::Renderer(berry::Renderer* renderer)
 {
 	m_shader->Bind();
 	glBindVertexArray(m_vao);
 	m_indexBuffer->Bind();
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-	m_indexBuffer->UnBind();
+	m_indexBuffer->Unbind();
 	m_shader->Unbind();
 	glBindVertexArray(0);
 }

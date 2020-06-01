@@ -86,19 +86,21 @@ int main(void)
 	DrawPosColorMixVBO test5;
 	test5.Prepare();
 	test5.SetShader(&shader2);
+
+	berry::Renderer renderer;
+	renderer.SetClearColor(0.5, 0.8, 0.5, 1.0);
     
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
 		/* Render here */
-//        glClearColor(0.5,0.8,0.5,1.0);
-		glClear(GL_COLOR_BUFFER_BIT);
+		renderer.Clear();
 
 		//test1.Renderer();
-		test2.Renderer();
-		test3.Renderer();
-		test4.Renderer();
-		test5.Renderer();
+		test2.Renderer(&renderer);
+		test3.Renderer(&renderer);
+		test4.Renderer(&renderer);
+		test5.Renderer(&renderer);
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);

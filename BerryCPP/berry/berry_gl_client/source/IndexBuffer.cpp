@@ -20,7 +20,7 @@ void berry::IndexBuffer::Bind() const
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,m_bufferID);
 }
 
-void berry::IndexBuffer::UnBind() const
+void berry::IndexBuffer::Unbind() const
 {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,0);
 }

@@ -14,7 +14,7 @@ namespace berry
 		void AddBuffer(const VertexBuffer& vb,const VertexBufferLayout& layout);
 
 		void Bind() const;
-		void UnBind() const;
+		void Unbind() const;
 
 	private:
 		GLuint	m_vao = 0;

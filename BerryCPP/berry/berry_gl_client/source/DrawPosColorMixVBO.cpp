@@ -1,5 +1,6 @@
 #include "DrawPosColorMixVBO.h"
 #include "Renderer.h"
+#include "Shader.h"
 using namespace berry;
 
 DrawPosColorMixVBO::~DrawPosColorMixVBO()
@@ -49,27 +50,15 @@ void DrawPosColorMixVBO::Prepare()
 	layout.Push<float>(4);
 	m_vertexArray->AddBuffer(*m_vertexBuffer, layout);
 	
-	m_vertexBuffer->UnBind();
-	m_vertexArray->UnBind();
+	m_vertexBuffer->Unbind();
+	m_vertexArray->Unbind();
 
 	// EBO
 	m_indexBuffer = new berry::IndexBuffer(m_indice, 6);
-	m_indexBuffer->UnBind();
+	m_indexBuffer->Unbind();
 }
 
-void DrawPosColorMixVBO::Renderer()
+void DrawPosColorMixVBO::Renderer(berry::Renderer* renderer)
 {
-	// pre draw
-	m_shader->Bind();
-	
-	m_vertexArray->Bind();
-	m_indexBuffer->Bind();
-
-	// do draw
-	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
-	// after draw
-	m_indexBuffer->UnBind();
-	m_shader->Unbind();
-	glBindVertexArray(0);
+	renderer->Draw(*m_vertexArray, *m_indexBuffer, *m_shader);
 }

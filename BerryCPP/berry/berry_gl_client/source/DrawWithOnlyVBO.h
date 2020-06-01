@@ -9,13 +9,13 @@
 	不使用 VAO 绘制的示例  
 	在 OpenGL Core Profile 下会由于没有生成 VAO 报错 
 */
-class DrawWithOnlyVBO : public DrawTestcaseBase
+class DrawWithOnlyVBO : public berry::DrawTestcaseBase
 {
 public:
 	~DrawWithOnlyVBO();
 
 	virtual void Prepare() override;
-	virtual void Renderer() override;
+	virtual void Renderer(berry::Renderer* renderer) override;
 
 private:
 	GLuint	m_vbo = 0;

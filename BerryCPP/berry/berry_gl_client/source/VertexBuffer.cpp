@@ -18,7 +18,7 @@ void berry::VertexBuffer::Bind() const
 	glBindBuffer(GL_ARRAY_BUFFER, m_rendererID);
 }
 
-void berry::VertexBuffer::UnBind() const
+void berry::VertexBuffer::Unbind() const
 {
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 }

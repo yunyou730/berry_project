@@ -14,13 +14,13 @@
 
 	最终使用 ebo 绘制
 */
-class DrawPosColor : public DrawTestcaseBase
+class DrawPosColor : public berry::DrawTestcaseBase
 {
 public:
 	~DrawPosColor();
 
 	virtual void Prepare() override;
-	virtual void Renderer() override;
+	virtual void Renderer(berry::Renderer* renderer) override;
 
 private:
 	GLuint	m_vao = 0;

@@ -1,4 +1,5 @@
 #include "DrawWithOnlyVBO.h"
+#include "Shader.h"
 #include "Renderer.h"
 
 DrawWithOnlyVBO::~DrawWithOnlyVBO()
@@ -25,7 +26,7 @@ void DrawWithOnlyVBO::Prepare()
     GLCALL(glBindBuffer(GL_ARRAY_BUFFER, 0));
 }
 
-void DrawWithOnlyVBO::Renderer()
+void DrawWithOnlyVBO::Renderer(berry::Renderer* renderer)
 {
     GLCALL(glBindBuffer(GL_ARRAY_BUFFER, m_vbo));
     GLCALL(glEnableVertexAttribArray(0));

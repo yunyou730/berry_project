@@ -1,6 +1,6 @@
 #include "DrawTestcaseBase.h"
 
-DrawTestcaseBase::~DrawTestcaseBase()
+berry::DrawTestcaseBase::~DrawTestcaseBase()
 {
 
 }

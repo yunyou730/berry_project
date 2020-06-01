@@ -12,7 +12,7 @@ namespace berry
 		inline unsigned int GetCount() const { return m_count; }
 
 		void Bind() const;
-		void UnBind() const;
+		void Unbind() const;
 	private:
 		unsigned int m_bufferID;
 		int		     m_count;

@@ -9,13 +9,13 @@
 /*
  Draw with simple VAO,VBO,EBO
 */
-class DrawWithEBO : public DrawTestcaseBase
+class DrawWithEBO : public berry::DrawTestcaseBase
 {
 public:
 	~DrawWithEBO();
 
 	virtual void Prepare() override;
-	virtual void Renderer() override;
+	virtual void Renderer(berry::Renderer* renderer) override;
 
 private:
 	GLuint	m_vao = 0;

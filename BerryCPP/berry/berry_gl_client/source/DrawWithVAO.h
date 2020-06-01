@@ -11,13 +11,13 @@
 */
 namespace berry
 {
-    class DrawWithVAO : public DrawTestcaseBase
+    class DrawWithVAO : public berry::DrawTestcaseBase
     {
     public:
         ~DrawWithVAO();
 
         virtual void Prepare() override;
-        virtual void Renderer() override;
+        virtual void Renderer(berry::Renderer* renderer) override;
 
     private:
         GLuint    m_vao = 0;

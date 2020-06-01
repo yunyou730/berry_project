@@ -1,5 +1,6 @@
 #include "DrawPosColor.h"
 #include "Renderer.h"
+#include "Shader.h"
 using namespace berry;
 
 DrawPosColor::~DrawPosColor()
@@ -46,7 +47,7 @@ void DrawPosColor::Prepare()
 	m_posBuffer = new VertexBuffer(m_vertice, sizeof(float) * 8);
 	m_colorBuffer = new VertexBuffer(m_color, sizeof(float) * 16);
 	m_indexBuffer = new IndexBuffer(m_indice, 6);
-	m_indexBuffer->UnBind();
+	m_indexBuffer->Unbind();
 
 	// VAO
 	glBindVertexArray(m_vao);
@@ -63,7 +64,7 @@ void DrawPosColor::Prepare()
 	glBindVertexArray(0);
 }
 
-void DrawPosColor::Renderer()
+void DrawPosColor::Renderer(berry::Renderer* renderer)
 {
 	// pre draw
 	m_shader->Bind();
@@ -75,6 +76,6 @@ void DrawPosColor::Renderer()
 
 	// after draw
 	m_shader->Unbind();
-	m_indexBuffer->UnBind();
+	m_indexBuffer->Unbind();
 	glBindVertexArray(0);
 }

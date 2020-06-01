@@ -11,7 +11,7 @@ namespace berry
 		~VertexBuffer();
 
 		void Bind() const;
-		void UnBind() const;
+		void Unbind() const;
 
 	private:
 		unsigned int m_rendererID;

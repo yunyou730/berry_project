@@ -1,4 +1,5 @@
 #include "DrawWithVAO.h"
+#include "Shader.h"
 using namespace berry;
 
 DrawWithVAO::~DrawWithVAO()
@@ -50,7 +51,7 @@ void DrawWithVAO::Prepare()
 	
 }
 
-void DrawWithVAO::Renderer()
+void DrawWithVAO::Renderer(berry::Renderer* renderer)
 {
 	glBindVertexArray(m_vao);
 	m_shader->Bind();

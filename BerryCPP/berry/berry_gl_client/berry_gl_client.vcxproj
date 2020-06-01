@@ -150,6 +150,7 @@
     <ClCompile Include="source\IndexBuffer.cpp" />
     <ClCompile Include="source\Renderer.cpp" />
     <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\Shader.cpp" />
     <ClCompile Include="source\ShaderManager.cpp" />
     <ClCompile Include="source\VertexArray.cpp" />
     <ClCompile Include="source\VertexBuffer.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="source\DrawWithVAO.h" />
     <ClInclude Include="source\IndexBuffer.h" />
     <ClInclude Include="source\Renderer.h" />
+    <ClInclude Include="source\Shader.h" />
     <ClInclude Include="source\ShaderManager.h" />
     <ClInclude Include="source\VertexArray.h" />
     <ClInclude Include="source\VertexBuffer.h" />

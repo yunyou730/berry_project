@@ -57,6 +57,9 @@
     <ClCompile Include="source\VertexBufferLayout.cpp">
       <Filter>src\gl</Filter>
     </ClCompile>
+    <ClCompile Include="source\Shader.cpp">
+      <Filter>src\gl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ShaderManager.h">
@@ -93,6 +96,9 @@
       <Filter>src\gl</Filter>
     </ClInclude>
     <ClInclude Include="source\VertexBufferLayout.h">
+      <Filter>src\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Shader.h">
       <Filter>src\gl</Filter>
     </ClInclude>
   </ItemGroup>

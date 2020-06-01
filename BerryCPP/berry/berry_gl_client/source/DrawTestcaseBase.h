@@ -1,4 +1,5 @@
 #pragma once
+#include "Shader.h"
 
 class DrawTestcaseBase
 {
@@ -7,11 +8,11 @@ public:
 
 	virtual void Prepare() = 0;
 	virtual void Renderer() = 0;
-	void SetShader(unsigned int shaderID)
+	void SetShader(berry::Shader* shader)
 	{
-		m_shaderID = shaderID;
+		m_shader = shader;
 	}
 
 protected:
-	unsigned int m_shaderID = 0;
+	berry::Shader*	m_shader = nullptr;
 };

@@ -29,11 +29,11 @@ void DrawWithOnlyVBO::Renderer()
 {
     GLCALL(glBindBuffer(GL_ARRAY_BUFFER, m_vbo));
     GLCALL(glEnableVertexAttribArray(0));
-    GLCALL(glUseProgram(m_shaderID));
+    m_shader->Bind();
 
     GLCALL(glDrawArrays(GL_TRIANGLES, 0, 3));
 
-    GLCALL(glUseProgram(0));
+    m_shader->Unbind();
     GLCALL(glDisableVertexAttribArray(0));
     GLCALL(glBindBuffer(GL_ARRAY_BUFFER, 0));
 }

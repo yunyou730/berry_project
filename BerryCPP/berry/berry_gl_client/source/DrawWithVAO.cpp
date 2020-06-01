@@ -53,8 +53,8 @@ void DrawWithVAO::Prepare()
 void DrawWithVAO::Renderer()
 {
 	glBindVertexArray(m_vao);
-	glUseProgram(m_shaderID);
+	m_shader->Bind();
 	glDrawArrays(GL_TRIANGLES, 0, 6);
-	glUseProgram(0);
+	m_shader->Unbind();
 	glBindVertexArray(0);
 }

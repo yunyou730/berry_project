@@ -60,7 +60,7 @@ void DrawPosColorMixVBO::Prepare()
 void DrawPosColorMixVBO::Renderer()
 {
 	// pre draw
-	glUseProgram(m_shaderID);
+	m_shader->Bind();
 	
 	m_vertexArray->Bind();
 	m_indexBuffer->Bind();
@@ -70,5 +70,6 @@ void DrawPosColorMixVBO::Renderer()
 
 	// after draw
 	m_indexBuffer->UnBind();
+	m_shader->Unbind();
 	glBindVertexArray(0);
 }

@@ -66,7 +66,7 @@ void DrawPosColor::Prepare()
 void DrawPosColor::Renderer()
 {
 	// pre draw
-	glUseProgram(m_shaderID);
+	m_shader->Bind();
 	glBindVertexArray(m_vao);
 	m_indexBuffer->Bind();
 
@@ -74,6 +74,7 @@ void DrawPosColor::Renderer()
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 	// after draw
+	m_shader->Unbind();
 	m_indexBuffer->UnBind();
 	glBindVertexArray(0);
 }

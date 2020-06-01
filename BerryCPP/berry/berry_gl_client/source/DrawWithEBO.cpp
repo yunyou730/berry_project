@@ -60,10 +60,11 @@ void DrawWithEBO::Prepare()
 
 void DrawWithEBO::Renderer()
 {
-	glUseProgram(m_shaderID);
+	m_shader->Bind();
 	glBindVertexArray(m_vao);
 	m_indexBuffer->Bind();
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 	m_indexBuffer->UnBind();
+	m_shader->Unbind();
 	glBindVertexArray(0);
 }

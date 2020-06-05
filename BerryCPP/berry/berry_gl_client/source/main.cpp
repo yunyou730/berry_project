@@ -13,6 +13,7 @@
 #include "DrawWithEBO.h"
 #include "DrawPosColor.h"
 #include "DrawPosColorMixVBO.h"
+#include "DrawSimpleTexture.h"
 
 int main(void)
 {
@@ -64,31 +65,36 @@ int main(void)
 	// shader
 	berry::Shader shader1("res/test.shader");
 	berry::Shader shader2("res/test2.shader");
+	berry::Shader shader3("res/test3.shader");
 
 
 	//DrawWithOnlyVBO test1;
 	//test1.Prepare();
 	//test1.SetShader(shader);
 
-	berry::DrawWithVAO test2;
-	test2.Prepare();
-	test2.SetShader(&shader1);
-    
-	DrawWithEBO test3;
-	test3.Prepare();
-	test3.SetShader(&shader1);
-    
-    
-	DrawPosColor test4;
-	test4.Prepare();
-	test4.SetShader(&shader2);
+	//berry::DrawWithVAO test2;
+	//test2.Prepare();
+	//test2.SetShader(&shader1);
+ //   
+	//DrawWithEBO test3;
+	//test3.Prepare();
+	//test3.SetShader(&shader1);
+ //   
+ //   
+	//DrawPosColor test4;
+	//test4.Prepare();
+	//test4.SetShader(&shader2);
 
-	DrawPosColorMixVBO test5;
-	test5.Prepare();
-	test5.SetShader(&shader2);
+	//DrawPosColorMixVBO test5;
+	//test5.Prepare();
+	//test5.SetShader(&shader2);
+
+	DrawSimpleTexture test6;
+	test6.Prepare();
+	test6.SetShader(&shader1);
 
 	berry::Renderer renderer;
-	renderer.SetClearColor(0.5, 0.8, 0.5, 1.0);
+	//renderer.SetClearColor(0.5, 0.8, 0.5, 1.0);
     
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
@@ -97,10 +103,11 @@ int main(void)
 		renderer.Clear();
 
 		//test1.Renderer();
-		test2.Renderer(&renderer);
-		test3.Renderer(&renderer);
-		test4.Renderer(&renderer);
-		test5.Renderer(&renderer);
+		//test2.Renderer(&renderer);
+		//test3.Renderer(&renderer);
+		//test4.Renderer(&renderer);
+		//test5.Renderer(&renderer);
+		test6.Renderer(&renderer);
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);

@@ -16,6 +16,9 @@
     <Filter Include="src\gl">
       <UniqueIdentifier>{0576a7db-accc-4fc6-a436-3b451fcfe506}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\vendor">
+      <UniqueIdentifier>{e9c71bac-03de-44f2-a198-56e692465f5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\ShaderManager.cpp">
@@ -60,6 +63,15 @@
     <ClCompile Include="source\Shader.cpp">
       <Filter>src\gl</Filter>
     </ClCompile>
+    <ClCompile Include="source\DrawSimpleTexture.cpp">
+      <Filter>src\testcase</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Texture2D.cpp">
+      <Filter>src\gl</Filter>
+    </ClCompile>
+    <ClCompile Include="source\stb_image.cpp">
+      <Filter>src\vendor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\ShaderManager.h">
@@ -101,12 +113,24 @@
     <ClInclude Include="source\Shader.h">
       <Filter>src\gl</Filter>
     </ClInclude>
+    <ClInclude Include="source\DrawSimpleTexture.h">
+      <Filter>src\testcase</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Texture2D.h">
+      <Filter>src\gl</Filter>
+    </ClInclude>
+    <ClInclude Include="source\stb_image.h">
+      <Filter>src\vendor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\test.shader">
       <Filter>res</Filter>
     </None>
     <None Include="res\test2.shader">
+      <Filter>res</Filter>
+    </None>
+    <None Include="res\test3.shader">
       <Filter>res</Filter>
     </None>
   </ItemGroup>

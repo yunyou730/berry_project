@@ -5,13 +5,12 @@ using namespace berry;
 
 VertexArray::VertexArray()
 {
-	glGenVertexArrays(1, &m_vao);
-	
+	GLCALL(glGenVertexArrays(1, &m_vao));
 }
 
 VertexArray::~VertexArray()
 {
-	glDeleteVertexArrays(1, &m_vao);
+	GLCALL(glDeleteVertexArrays(1, &m_vao));
 }
 
 void VertexArray::AddBuffer(const VertexBuffer& vb,const VertexBufferLayout& layout)

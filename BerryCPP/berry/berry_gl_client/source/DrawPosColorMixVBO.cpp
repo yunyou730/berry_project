@@ -19,19 +19,18 @@ void DrawPosColorMixVBO::Prepare()
 	m_indice = new unsigned int[6];
 
 	int index = 0;
-	// v1
+	// left down
 	m_buffer[index++] = -0.5; m_buffer[index++] = -0.5;		// pos
 	m_buffer[index++] = 1.0; m_buffer[index++] = 1.0; m_buffer[index++] = 0.0f; m_buffer[index++] = 1.0f;	// color
-	// v2
+	// left top
 	m_buffer[index++] = -0.5; m_buffer[index++] =  0.5;
 	m_buffer[index++] = 0.0; m_buffer[index++] = 1.0; m_buffer[index++] = 1.0f; m_buffer[index++] = 1.0f;
-	// v3
+	// right up
 	m_buffer[index++] =  0.5; m_buffer[index++] =  0.5;
 	m_buffer[index++] = 1.0; m_buffer[index++] = 0.0; m_buffer[index++] = 1.0f; m_buffer[index++] = 1.0f;
-	// v4
+	// right down
 	m_buffer[index++] =  0.5; m_buffer[index++] = -0.5;
 	m_buffer[index++] = 1.0; m_buffer[index++] = 0.5; m_buffer[index++] = 1.0f; m_buffer[index++] = 1.0f;
-
 
 	index = 0;
 	m_indice[index++] = 0;

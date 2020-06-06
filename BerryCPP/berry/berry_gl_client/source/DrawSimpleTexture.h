@@ -18,6 +18,6 @@ private:
 	GLuint		m_vao;
 	GLuint		m_vbo;
 	GLuint		m_ebo;
-	Texture* m_texture = nullptr;
+	Texture*    m_texture = nullptr;
 };
 

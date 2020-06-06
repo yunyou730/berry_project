@@ -13,13 +13,13 @@ berry::Texture::Texture(const std::string& path)
 
 	//stbi_set_flip_vertically_on_load(1);
 	m_localBuffer = stbi_load(path.c_str(), &m_width, &m_height, &m_bpp, 4);// 4 means RGBA
-
+    
 	// test don't set ...
 	GLCALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,GL_LINEAR));
 	GLCALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR));
-	GLCALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP));
-	GLCALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP));
-
+	GLCALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE));
+	GLCALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE));
+    
 	GLCALL(glTexImage2D(GL_TEXTURE_2D,0,GL_RGBA8,m_width,m_height,0,GL_RGBA,GL_UNSIGNED_BYTE,m_localBuffer));
 	glBindTexture(GL_TEXTURE_2D, 0);
 
@@ -33,6 +33,7 @@ berry::Texture::Texture(const std::string& path)
 berry::Texture::~Texture()
 {
 	glDeleteTextures(1, &m_textureID);
+    m_textureID = 0;
 }
 
 void berry::Texture::Bind(unsigned int slot /*= 0*/) const

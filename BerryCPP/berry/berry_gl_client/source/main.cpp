@@ -66,7 +66,7 @@ int main(void)
 	berry::Shader shader1("res/test.shader");
 	berry::Shader shader2("res/test2.shader");
 	berry::Shader shader3("res/test3.shader");
-
+    berry::Shader shaderSimpleTexture("res/simple_texture.shader");
 
 	//DrawWithOnlyVBO test1;
 	//test1.Prepare();

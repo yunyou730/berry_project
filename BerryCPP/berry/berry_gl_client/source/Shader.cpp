@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include "Renderer.h"
 
 using namespace berry;
 
@@ -30,16 +31,36 @@ void Shader::Unbind() const
 	glUseProgram(0);
 }
     
-void Shader::SetUniform4f(const std::string& name,float v0,float v1,float v2,float v3)
+void Shader::SetUniform1i(const std::string& name,int value)
 {
-    
-}
-    
-unsigned int Shader::GetUniformLocation(const std::string& name)
-{
-    return 0;
+    glUniform1i(GetUniformLocation(name),value);
 }
 
+void Shader::SetUniform1f(const std::string& name,float value)
+{
+    glUniform1f(GetUniformLocation(name),value);
+}
+
+void Shader::SetUniform4f(const std::string& name,float v0,float v1,float v2,float v3)
+{
+    glUniform4f(GetUniformLocation(name),v0,v1,v2,v3);
+}
+    
+int Shader::GetUniformLocation(const std::string& name)
+{
+    std::map<std::string,int>::iterator it = m_uniformPosMap.find(name);
+    if(it != m_uniformPosMap.end())
+    {
+        return it->second;
+    }
+    int location = glGetUniformLocation(m_program,name.c_str());
+    if(location == -1)
+    {
+        std::cout << "GetUnitformLocation can not find " << name << std::endl;
+    }
+    m_uniformPosMap.insert(std::make_pair(name,location));
+    return location;
+}
 
 bool Shader::LoadSource(const std::string& path, ShaderSource& shaderSource)
 {

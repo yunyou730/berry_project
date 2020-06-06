@@ -1,5 +1,6 @@
 #include "DrawSimpleTexture.h"
 #include "VertexBuffer.h"
+#include "Renderer.h"
 using namespace berry;
 
 
@@ -8,6 +9,7 @@ DrawSimpleTexture::~DrawSimpleTexture()
 	glDeleteVertexArrays(1, &m_vao);
 	glDeleteBuffers(1, &m_vbo);
 	glDeleteBuffers(1, &m_ebo);
+    SAFE_DELETE(m_texture);
 }
 
 void DrawSimpleTexture::Prepare()
@@ -44,6 +46,9 @@ void DrawSimpleTexture::Prepare()
 	GLCALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ebo));
 	GLCALL(glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(unsigned int) * 6, indexBuffer, GL_STATIC_DRAW));
 	GLCALL(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+    
+    // Texture
+    m_texture = new Texture("res/wechat.png");
 }
 
 void DrawSimpleTexture::Renderer(berry::Renderer* renderer)

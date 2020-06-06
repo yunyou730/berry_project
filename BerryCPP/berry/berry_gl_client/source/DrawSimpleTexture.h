@@ -2,8 +2,9 @@
 #include "DrawTestcaseBase.h"
 #include "VertexArray.h"
 #include "IndexBuffer.h"
-#include "Shader.h"
 #include "Texture2D.h"
+#include "Shader.h"
+
 using namespace berry;
 
 class DrawSimpleTexture : public DrawTestcaseBase

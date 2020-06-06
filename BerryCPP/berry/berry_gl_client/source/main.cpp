@@ -91,7 +91,7 @@ int main(void)
 
 	DrawSimpleTexture test6;
 	test6.Prepare();
-	test6.SetShader(&shader1);
+	test6.SetShader(&shaderSimpleTexture);
 
 	berry::Renderer renderer;
 	//renderer.SetClearColor(0.5, 0.8, 0.5, 1.0);

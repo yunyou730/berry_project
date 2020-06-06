@@ -1,20 +1,24 @@
 #shader vertex
 #version 330 core
 layout(location = 0) in vec4 position;
-layout(location = 1) in vec4 input_color;
-out vec4 pass_color;
+layout(location = 1) in vec2 uv;
+out vec2 v_uv;
+
 void main()
 {
-	pass_color = input_color;
-	gl_Position = position;
+    gl_Position = position;
+    v_uv = uv;
 }
 
 #shader fragment
 #version 330 core
-in vec4 pass_color;
+
 layout(location = 0) out vec4 color;
+uniform sampler2D u_Texture;
+in vec2 v_uv;
+
 void main()
 {
-	//color = vec4(0.2,0.5,0.8,1.0);
-	color = pass_color;
+    vec4 texColor = texture(u_Texture,v_uv);
+    color = texColor;
 }

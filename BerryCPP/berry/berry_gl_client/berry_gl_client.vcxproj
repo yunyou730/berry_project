@@ -145,6 +145,7 @@
     <ClCompile Include="source\DrawPosColorMixVBO.cpp" />
     <ClCompile Include="source\DrawSimpleTexture.cpp" />
     <ClCompile Include="source\DrawTestcaseBase.cpp" />
+    <ClCompile Include="source\DrawTexture2.cpp" />
     <ClCompile Include="source\DrawWithEBO.cpp" />
     <ClCompile Include="source\DrawWithOnlyVBO.cpp" />
     <ClCompile Include="source\DrawWithVAO.cpp" />
@@ -152,7 +153,6 @@
     <ClCompile Include="source\Renderer.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\Shader.cpp" />
-    <ClCompile Include="source\ShaderManager.cpp" />
     <ClCompile Include="source\stb_image.cpp" />
     <ClCompile Include="source\Texture2D.cpp" />
     <ClCompile Include="source\VertexArray.cpp" />
@@ -164,13 +164,13 @@
     <ClInclude Include="source\DrawPosColorMixVBO.h" />
     <ClInclude Include="source\DrawSimpleTexture.h" />
     <ClInclude Include="source\DrawTestcaseBase.h" />
+    <ClInclude Include="source\DrawTexture2.h" />
     <ClInclude Include="source\DrawWithEBO.h" />
     <ClInclude Include="source\DrawWithOnlyVBO.h" />
     <ClInclude Include="source\DrawWithVAO.h" />
     <ClInclude Include="source\IndexBuffer.h" />
     <ClInclude Include="source\Renderer.h" />
     <ClInclude Include="source\Shader.h" />
-    <ClInclude Include="source\ShaderManager.h" />
     <ClInclude Include="source\stb_image.h" />
     <ClInclude Include="source\Texture2D.h" />
     <ClInclude Include="source\VertexArray.h" />

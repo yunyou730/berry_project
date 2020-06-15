@@ -14,6 +14,7 @@
 #include "DrawPosColor.h"
 #include "DrawPosColorMixVBO.h"
 #include "DrawSimpleTexture.h"
+#include "DrawTexture2.h"
 
 int main(void)
 {
@@ -93,8 +94,11 @@ int main(void)
 	test6.Prepare();
 	test6.SetShader(&shaderSimpleTexture);
 
+	berry::DrawTexture2 test7;
+	test7.Prepare();
+
 	berry::Renderer renderer;
-	//renderer.SetClearColor(0.5, 0.8, 0.5, 1.0);
+	renderer.SetClearColor(1.0, 0.0, 0.5, 1.0);
     
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
@@ -108,6 +112,7 @@ int main(void)
 		//test4.Renderer(&renderer);
 		//test5.Renderer(&renderer);
 		test6.Renderer(&renderer);
+		test7.Renderer(&renderer);
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);

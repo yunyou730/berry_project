@@ -31,6 +31,8 @@
 		0F9CF9D4248BE7B8004E8F89 /* timeline.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0F9CF9D2248BE7A9004E8F89 /* timeline.png */; };
 		0F9CF9D5248BE7B8004E8F89 /* wechat.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0F9CF9D3248BE7A9004E8F89 /* wechat.png */; };
 		0F9CF9D7248BED4D004E8F89 /* simple_texture.shader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0F9CF9D6248BED1B004E8F89 /* simple_texture.shader */; };
+		0FD03F932497CF7D00F99D5F /* DrawTexture2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FD03F922497CF7D00F99D5F /* DrawTexture2.cpp */; };
+		0FD03F952497D32500F99D5F /* texture2.shader in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0FD03F942497D31B00F99D5F /* texture2.shader */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,7 @@
 			dstPath = res;
 			dstSubfolderSpec = 16;
 			files = (
+				0FD03F952497D32500F99D5F /* texture2.shader in CopyFiles */,
 				0F9CF9D7248BED4D004E8F89 /* simple_texture.shader in CopyFiles */,
 				0F9CF9D4248BE7B8004E8F89 /* timeline.png in CopyFiles */,
 				0F9CF9D5248BE7B8004E8F89 /* wechat.png in CopyFiles */,
@@ -91,6 +94,9 @@
 		0F9CF9D2248BE7A9004E8F89 /* timeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline.png; sourceTree = "<group>"; };
 		0F9CF9D3248BE7A9004E8F89 /* wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat.png; sourceTree = "<group>"; };
 		0F9CF9D6248BED1B004E8F89 /* simple_texture.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = simple_texture.shader; sourceTree = "<group>"; };
+		0FD03F912497CF7D00F99D5F /* DrawTexture2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawTexture2.h; path = ../BerryCPP/berry/berry_gl_client/source/DrawTexture2.h; sourceTree = "<group>"; };
+		0FD03F922497CF7D00F99D5F /* DrawTexture2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DrawTexture2.cpp; path = ../BerryCPP/berry/berry_gl_client/source/DrawTexture2.cpp; sourceTree = "<group>"; };
+		0FD03F942497D31B00F99D5F /* texture2.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = texture2.shader; sourceTree = "<group>"; };
 		0FD52D54247A2D2200185C5C /* berry_mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = berry_mac; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +139,7 @@
 		0F9159E4247A372900A5DD65 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				0FD03F942497D31B00F99D5F /* texture2.shader */,
 				0F9CF9D2248BE7A9004E8F89 /* timeline.png */,
 				0F9CF9D3248BE7A9004E8F89 /* wechat.png */,
 				0F5D505B247D74A500089B8C /* test2.shader */,
@@ -146,6 +153,8 @@
 		0F9CF9CF248BE4B6004E8F89 /* testcase */ = {
 			isa = PBXGroup;
 			children = (
+				0FD03F922497CF7D00F99D5F /* DrawTexture2.cpp */,
+				0FD03F912497CF7D00F99D5F /* DrawTexture2.h */,
 				0F9CF9B0248BE492004E8F89 /* DrawPosColor.cpp */,
 				0F9CF9B8248BE492004E8F89 /* DrawPosColor.h */,
 				0F9CF9BA248BE492004E8F89 /* DrawPosColorMixVBO.cpp */,
@@ -279,6 +288,7 @@
 				0F9CF9C3248BE492004E8F89 /* Texture2D.cpp in Sources */,
 				0F9CF9CC248BE492004E8F89 /* DrawPosColorMixVBO.cpp in Sources */,
 				0F9CF9CE248BE492004E8F89 /* Shader.cpp in Sources */,
+				0FD03F932497CF7D00F99D5F /* DrawTexture2.cpp in Sources */,
 				0F9CF9BE248BE492004E8F89 /* DrawWithOnlyVBO.cpp in Sources */,
 				0F9CF9CD248BE492004E8F89 /* DrawTestcaseBase.cpp in Sources */,
 				0F9CF9C2248BE492004E8F89 /* VertexBufferLayout.cpp in Sources */,

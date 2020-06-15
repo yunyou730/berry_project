@@ -68,6 +68,7 @@ int main(void)
 	berry::Shader shader2("res/test2.shader");
 	berry::Shader shader3("res/test3.shader");
     berry::Shader shaderSimpleTexture("res/simple_texture.shader");
+    berry::Shader shaderTexture2("res/texture2.shader");
 
 	//DrawWithOnlyVBO test1;
 	//test1.Prepare();
@@ -90,15 +91,16 @@ int main(void)
 	//test5.Prepare();
 	//test5.SetShader(&shader2);
 
-	DrawSimpleTexture test6;
-	test6.Prepare();
-	test6.SetShader(&shaderSimpleTexture);
+//	DrawSimpleTexture test6;
+//	test6.Prepare();
+//	test6.SetShader(&shaderSimpleTexture);
 
 	berry::DrawTexture2 test7;
 	test7.Prepare();
+    test7.SetShader(&shaderTexture2);
 
 	berry::Renderer renderer;
-	renderer.SetClearColor(1.0, 0.0, 0.5, 1.0);
+	renderer.SetClearColor(0.4, 0.0, 1.0, 1.0);
     
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
@@ -111,7 +113,7 @@ int main(void)
 		//test3.Renderer(&renderer);
 		//test4.Renderer(&renderer);
 		//test5.Renderer(&renderer);
-		test6.Renderer(&renderer);
+//		test6.Renderer(&renderer);
 		test7.Renderer(&renderer);
 
 		/* Swap front and back buffers */

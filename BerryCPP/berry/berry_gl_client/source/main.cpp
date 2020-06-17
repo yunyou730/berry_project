@@ -15,6 +15,10 @@
 #include "DrawPosColorMixVBO.h"
 #include "DrawSimpleTexture.h"
 #include "DrawTexture2.h"
+#include "DrawTextureMVP.h"
+
+#include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
 
 int main(void)
 {
@@ -69,7 +73,8 @@ int main(void)
 	berry::Shader shader3("res/test3.shader");
     berry::Shader shaderSimpleTexture("res/simple_texture.shader");
     berry::Shader shaderTexture2("res/texture2.shader");
-
+	berry::Shader shaderTextureMVP("res/texture_mvp.shader");
+	
 	//DrawWithOnlyVBO test1;
 	//test1.Prepare();
 	//test1.SetShader(shader);
@@ -99,9 +104,13 @@ int main(void)
 	test7.Prepare();
     test7.SetShader(&shaderTexture2);
 
+	berry::DrawTextureMVP test8;
+	test8.Prepare();
+	test8.SetShader(&shaderTextureMVP);
+	
 	berry::Renderer renderer;
-	renderer.SetClearColor(0.4, 0.0, 1.0, 1.0);
-    
+	renderer.SetClearColor(0.4f, 0.0f, 1.0f, 1.0f);
+
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
@@ -114,7 +123,8 @@ int main(void)
 		//test4.Renderer(&renderer);
 		//test5.Renderer(&renderer);
 //		test6.Renderer(&renderer);
-		test7.Renderer(&renderer);
+		//test7.Renderer(&renderer);
+		test8.Renderer(&renderer);
 
 		/* Swap front and back buffers */
 		glfwSwapBuffers(window);
